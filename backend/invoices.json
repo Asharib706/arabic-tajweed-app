@@ -1,0 +1,2702 @@
+[
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e02edf639cc3bb2c4bee84",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T15:55:11.773000",
+        "updated_at": "2025-03-23T15:55:11.773000"
+    },
+    {
+        "vendor_name": "INDAH GIFT & HOME DECO",
+        "invoice_number": "050100035279",
+        "invoice_date": "10/19/2018",
+        "products": [
+            {
+                "product_name": "ST-PRIVILEGE CARD/GD INDAH 88888",
+                "product_type": "Card",
+                "product_category": "Merchandise",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "GF-TABLE LAMP/STITCH <i> 62483",
+                "product_type": "Lamp",
+                "product_category": "Household",
+                "unit_price": 55.9,
+                "quantity": 1,
+                "total_product_price": 55.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 60.31,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 60.3,
+            "discount": 5.59
+        },
+        "_id": "67e02ee5639cc3bb2c4bee85",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T15:55:17.259000",
+        "updated_at": "2025-03-23T15:55:17.259000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e02efc9ed505f3509efeda",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T15:55:40.436000",
+        "updated_at": "2025-03-23T15:55:40.436000"
+    },
+    {
+        "vendor_name": "INDAH GIFT & HOME DECO",
+        "invoice_number": "050100035279",
+        "invoice_date": "10/19/2018",
+        "products": [
+            {
+                "product_name": "ST-PRIVILEGE CARD/GD INDAH",
+                "product_type": "Card",
+                "product_category": "Other",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "GF-TABLE LAMP/STITCH <i>",
+                "product_type": "Table Lamp",
+                "product_category": "Household",
+                "unit_price": 55.9,
+                "quantity": 1,
+                "total_product_price": 55.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 60.31,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 60.3,
+            "discount": 5.59
+        },
+        "_id": "67e02f019ed505f3509efedb",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T15:55:45.095000",
+        "updated_at": "2025-03-23T15:55:45.095000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e02f1c33eee8d981652035",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T15:56:12.649000",
+        "updated_at": "2025-03-23T15:56:12.649000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e0303733eee8d981652036",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T16:00:55.772000",
+        "updated_at": "2025-03-23T16:00:55.772000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e0305133eee8d981652037",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T16:01:21.883000",
+        "updated_at": "2025-03-23T16:01:21.883000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e0305a33eee8d981652038",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T16:01:30.448000",
+        "updated_at": "2025-03-23T16:01:30.448000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e05ca4778d1222a0816931",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T19:10:28.140000",
+        "updated_at": "2025-03-23T19:10:28.140000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e0663549dbda0545275ab3",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T19:51:17.595000",
+        "updated_at": "2025-03-23T19:51:17.595000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e0676c49dbda0545275ab4",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T19:56:28.733000",
+        "updated_at": "2025-03-23T19:56:28.733000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e06a5130c4e83eec06c932",
+        "user_id": "testasharib",
+        "created_at": "2025-03-23T20:08:49.026000",
+        "updated_at": "2025-03-23T20:08:49.026000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e19dbad678f66de3b621d4",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:00:26.068000",
+        "updated_at": "2025-03-24T18:00:26.068000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e19ffe17e89bc9039640c7",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:10:06.788000",
+        "updated_at": "2025-03-24T18:10:06.788000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a0237ae551ed716819d3",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:10:43.998000",
+        "updated_at": "2025-03-24T18:10:43.998000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a18e7fcdf40cceb98c23",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:16:46.627000",
+        "updated_at": "2025-03-24T18:16:46.627000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a1a57fcdf40cceb98c24",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:17:09.434000",
+        "updated_at": "2025-03-24T18:17:09.434000"
+    },
+    {
+        "vendor_name": "INDAH GIFT & HOME DECO",
+        "invoice_number": "-",
+        "invoice_date": "10/19/2018",
+        "products": [
+            {
+                "product_name": "ST-PRIVILEGE CARD/GD INDAH 88888",
+                "product_type": "Privilege Card",
+                "product_category": "Miscellaneous",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "GF-TABLE LAMP/STITCH <i> 62483",
+                "product_type": "Table Lamp",
+                "product_category": "Furniture",
+                "unit_price": 55.9,
+                "quantity": 1,
+                "total_product_price": 55.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 60.31,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 60.3,
+            "discount": 5.59
+        },
+        "_id": "67e1a1a97fcdf40cceb98c25",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:17:13.846000",
+        "updated_at": "2025-03-24T18:17:13.846000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Toys",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a1ce17ac3413851988ed",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:17:50.666000",
+        "updated_at": "2025-03-24T18:17:50.666000"
+    },
+    {
+        "vendor_name": "INDAH GIFT & HOME DECO",
+        "invoice_number": "-",
+        "invoice_date": "10/19/2018",
+        "products": [
+            {
+                "product_name": "ST-PRIVILEGE CARD/GD INDAH",
+                "product_type": "Card",
+                "product_category": "-",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "GF-TABLE LAMP/STITCH <i>",
+                "product_type": "Lamp",
+                "product_category": "Household",
+                "unit_price": 55.9,
+                "quantity": 1,
+                "total_product_price": 55.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 60.31,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 60.3,
+            "discount": 5.59
+        },
+        "_id": "67e1a1d217ac3413851988ee",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:17:54.312000",
+        "updated_at": "2025-03-24T18:17:54.312000"
+    },
+    {
+        "vendor_name": "OJC MARKETING SDN BHD",
+        "invoice_number": "PEGIV-1030765",
+        "invoice_date": "01/15/2019",
+        "products": [
+            {
+                "product_name": "000000111",
+                "product_type": "Unknown",
+                "product_category": "-",
+                "unit_price": 193.0,
+                "quantity": 1,
+                "total_product_price": 193.0
+            },
+            {
+                "product_name": "KINGS SAFETY SHOES KWD 805",
+                "product_type": "SAFETY SHOES",
+                "product_category": "Apparel",
+                "unit_price": 193.0,
+                "quantity": 1,
+                "total_product_price": 193.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 193.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 193.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a1f317ac3413851988ef",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:18:27.636000",
+        "updated_at": "2025-03-24T18:18:27.636000"
+    },
+    {
+        "vendor_name": "OJC MARKETING SDN BHD",
+        "invoice_number": "PEGIV-1030765",
+        "invoice_date": "01/15/2019",
+        "products": [
+            {
+                "product_name": "000000111 KINGS SAFETY SHOES KWD 805",
+                "product_type": "SAFETY SHOES",
+                "product_category": "Apparel",
+                "unit_price": 193.0,
+                "quantity": 1,
+                "total_product_price": 193.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 193.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 193.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a28d66c99fbb9f8ce6bb",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:21:01.681000",
+        "updated_at": "2025-03-24T18:21:01.681000"
+    },
+    {
+        "vendor_name": "OJC MARKETING SDN BHD",
+        "invoice_number": "PEGIV-1030765",
+        "invoice_date": "01/15/2019",
+        "products": [
+            {
+                "product_name": "000000111",
+                "product_type": "Unknown",
+                "product_category": "-",
+                "unit_price": 193.0,
+                "quantity": 1,
+                "total_product_price": 193.0
+            },
+            {
+                "product_name": "KINGS SAFETY SHOES KWD 805",
+                "product_type": "SAFETY SHOES",
+                "product_category": "Apparel",
+                "unit_price": 193.0,
+                "quantity": 1,
+                "total_product_price": 193.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 193.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 2,
+            "total_price": 193.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a2ad66c99fbb9f8ce6bc",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:21:33.050000",
+        "updated_at": "2025-03-24T18:21:33.050000"
+    },
+    {
+        "vendor_name": "BOOK TAK (TAMAN DAYA) SDN BHD",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a2b066c99fbb9f8ce6bd",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:21:36.408000",
+        "updated_at": "2025-03-24T18:21:36.408000"
+    },
+    {
+        "vendor_name": "SOON HUAT MACHINERY ENTERPRISE",
+        "invoice_number": "CS00004040",
+        "invoice_date": "11/01/2019",
+        "products": [
+            {
+                "product_name": "REPAIR ENGINE POWER SPRAYER (1UNIT) workmanship & service",
+                "product_type": "Engine Repair Service",
+                "product_category": "Automotive",
+                "unit_price": 80.0,
+                "quantity": 1,
+                "total_product_price": 80.0
+            },
+            {
+                "product_name": "GIANT 606 OVERFLOW ASSY",
+                "product_type": "Overflow Assembly",
+                "product_category": "Hardware",
+                "unit_price": 160.0,
+                "quantity": 1,
+                "total_product_price": 160.0
+            },
+            {
+                "product_name": "ENGINE OIL",
+                "product_type": "Engine Oil",
+                "product_category": "Automotive",
+                "unit_price": 17.0,
+                "quantity": 1,
+                "total_product_price": 17.0
+            },
+            {
+                "product_name": "GREASE FOR TOOLS 40ML (AKODA)",
+                "product_type": "Grease",
+                "product_category": "Automotive",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "EY20 PLUG CHAMPION",
+                "product_type": "Spark Plug",
+                "product_category": "Automotive",
+                "unit_price": 6.0,
+                "quantity": 1,
+                "total_product_price": 6.0
+            },
+            {
+                "product_name": "STARTER TALI",
+                "product_type": "Starter Rope",
+                "product_category": "Hardware",
+                "unit_price": 8.0,
+                "quantity": 1,
+                "total_product_price": 8.0
+            },
+            {
+                "product_name": "EY20 STARTER HANDLE",
+                "product_type": "Starter Handle",
+                "product_category": "Hardware",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "HD40 1L COTIN",
+                "product_type": "Engine Oil",
+                "product_category": "Automotive",
+                "unit_price": 18.0,
+                "quantity": 2,
+                "total_product_price": 36.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 327.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 9,
+            "total_price": 327.0,
+            "discount": 0.0
+        },
+        "_id": "67e1a2cf66c99fbb9f8ce6be",
+        "user_id": "testasharib",
+        "created_at": "2025-03-24T18:22:07.694000",
+        "updated_at": "2025-03-24T18:22:07.694000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "6807d0a7e8fbf95eab4ec95c",
+        "user_id": "testasharib",
+        "created_at": "2025-04-22T17:23:51.155000",
+        "updated_at": "2025-04-22T17:23:51.155000"
+    },
+    {
+        "vendor_name": "hasan",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "6807d0e5e8fbf95eab4ec95d",
+        "user_id": "testasharib",
+        "created_at": "2025-04-22T17:24:53.444000",
+        "updated_at": "2025-04-22T17:24:53.444000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "680a7bd30f40ab00450fadc5",
+        "user_id": "testasharib",
+        "created_at": "2025-04-24T17:58:43.329000",
+        "updated_at": "2025-04-24T17:58:43.329000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "680a7bee0f40ab00450fadc6",
+        "user_id": "testasharib",
+        "created_at": "2025-04-24T17:59:10.274000",
+        "updated_at": "2025-04-24T17:59:10.274000"
+    },
+    {
+        "vendor_name": "asharib",
+        "invoice_number": "TD01167104",
+        "invoice_date": "12/25/2018",
+        "products": [
+            {
+                "product_name": "KF MODELLING CLAY KIDDY FISH",
+                "product_type": "MODELLING CLAY",
+                "product_category": "Arts & Crafts",
+                "unit_price": 9.0,
+                "quantity": 1,
+                "total_product_price": 9.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 9.0,
+            "discount": 0.0
+        },
+        "_id": "680aa87399e13152c29abf66",
+        "user_id": "testasharib",
+        "created_at": "2025-04-24T21:09:07.612000",
+        "updated_at": "2025-04-24T21:09:07.612000"
+    },
+    {
+        "vendor_name": "OJC MARKETING SDN BHD",
+        "invoice_number": "PEGIV-1030531",
+        "invoice_date": "02/01/2019",
+        "products": [
+            {
+                "product_name": "000000111",
+                "product_type": "None",
+                "product_category": "-",
+                "unit_price": 170.0,
+                "quantity": 1,
+                "total_product_price": 170.0
+            },
+            {
+                "product_name": "KINGS SAFETY SHOES KWD 805",
+                "product_type": "Shoes",
+                "product_category": "Apparel",
+                "unit_price": 170.0,
+                "quantity": 0,
+                "total_product_price": 0.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 170.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 170.0,
+            "discount": 0.0
+        },
+        "_id": "680ac8bc38e798ac03ac16d6",
+        "user_id": "testasharib",
+        "created_at": "2025-04-24T23:26:52.179000",
+        "updated_at": "2025-04-24T23:26:52.179000"
+    },
+    {
+        "vendor_name": "MR. D.I.Y. SDN BHD",
+        "invoice_number": "R000020832",
+        "invoice_date": "12/28/2017",
+        "products": [
+            {
+                "product_name": "PADLOCK ST-P6150 50MM",
+                "product_type": "PADLOCK",
+                "product_category": "Hardware",
+                "unit_price": 9.9,
+                "quantity": 1,
+                "total_product_price": 9.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.9,
+            "gst": 0.56,
+            "other_taxes": 0.0,
+            "tax": 0.56,
+            "total_quantity": 1,
+            "total_price": 0.0,
+            "discount": 0.0
+        },
+        "_id": "680b640476f09166ce1abafe",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:24.379000",
+        "updated_at": "2025-04-25T10:29:24.379000"
+    },
+    {
+        "vendor_name": "MYDIN",
+        "invoice_number": "261172",
+        "invoice_date": "04/02/2017",
+        "products": [
+            {
+                "product_name": "MYCLIP BINDER CLIP 12S 25MM 12S EA",
+                "product_type": "BINDER CLIP",
+                "product_category": "Office Supplies",
+                "unit_price": 2.0,
+                "quantity": 1,
+                "total_product_price": 2.0
+            },
+            {
+                "product_name": "MYCLIP BINDER CLIP 15MM 12S CS",
+                "product_type": "BINDER CLIP",
+                "product_category": "Office Supplies",
+                "unit_price": 12.0,
+                "quantity": 2,
+                "total_product_price": 24.0
+            },
+            {
+                "product_name": "MYCLIP BINDER CLIP 15MM 12S EA",
+                "product_type": "BINDER CLIP",
+                "product_category": "Office Supplies",
+                "unit_price": 1.0,
+                "quantity": 10,
+                "total_product_price": 10.0
+            },
+            {
+                "product_name": "PARTNER E/LOPE 4.51NX9.5IN W4292 EA",
+                "product_type": "ENVELOPE",
+                "product_category": "Office Supplies",
+                "unit_price": 2.2,
+                "quantity": 2,
+                "total_product_price": 4.4
+            },
+            {
+                "product_name": "QUALITY LETTER TRAY IT-1196-MIX EA",
+                "product_type": "LETTER TRAY",
+                "product_category": "Office Supplies",
+                "unit_price": 14.9,
+                "quantity": 3,
+                "total_product_price": 44.7
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 85.1,
+            "gst": 4.83,
+            "other_taxes": 0.0,
+            "tax": 4.83,
+            "total_quantity": 18,
+            "total_price": 85.1,
+            "discount": 8.0
+        },
+        "_id": "680b640f76f09166ce1abaff",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:35.879000",
+        "updated_at": "2025-04-25T10:29:35.879000"
+    },
+    {
+        "vendor_name": "IKEA Cheras",
+        "invoice_number": "0000000011000140428",
+        "invoice_date": "09/08/2017",
+        "products": [
+            {
+                "product_name": "30169728 BAGIS COAT-HANGER CH",
+                "product_type": "Coat Hanger",
+                "product_category": "Household",
+                "unit_price": 4.9,
+                "quantity": 2,
+                "total_product_price": 9.8
+            },
+            {
+                "product_name": "70350938 TEODORES CH",
+                "product_type": "Chair",
+                "product_category": "Furniture",
+                "unit_price": 90.0,
+                "quantity": 1,
+                "total_product_price": 90.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 99.8,
+            "gst": 5.64,
+            "other_taxes": 0.0,
+            "tax": 5.64,
+            "total_quantity": 3,
+            "total_price": 0.0,
+            "discount": 0.0
+        },
+        "_id": "680b641576f09166ce1abb00",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:41.331000",
+        "updated_at": "2025-04-25T10:29:41.331000"
+    },
+    {
+        "vendor_name": "HON HWA HARDWARE TRADING",
+        "invoice_number": "-",
+        "invoice_date": "05/01/2017",
+        "products": [
+            {
+                "product_name": "5 PVC WALLPLUG (50PCS)",
+                "product_type": "WALLPLUG",
+                "product_category": "Hardware",
+                "unit_price": 1.0,
+                "quantity": 5,
+                "total_product_price": 5.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.0,
+            "gst": 0.28,
+            "other_taxes": 0.0,
+            "tax": 0.28,
+            "total_quantity": 5,
+            "total_price": 5.0,
+            "discount": 0.0
+        },
+        "_id": "680b641976f09166ce1abb01",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:45.827000",
+        "updated_at": "2025-04-25T10:29:45.827000"
+    },
+    {
+        "vendor_name": "MR. D.I.Y. (KUCHAI) SDN BHD",
+        "invoice_number": "R000017473",
+        "invoice_date": "08/03/2017",
+        "products": [
+            {
+                "product_name": "BOOSTER CABLE XH-500A",
+                "product_type": "Cable",
+                "product_category": "Electronics",
+                "unit_price": 29.9,
+                "quantity": 1,
+                "total_product_price": 29.9
+            },
+            {
+                "product_name": "MOTH BALLS 150G",
+                "product_type": "Moth Balls",
+                "product_category": "Household",
+                "unit_price": 2.1,
+                "quantity": 1,
+                "total_product_price": 2.1
+            },
+            {
+                "product_name": "DIY GOLD TWIST DRILL 3MM",
+                "product_type": "Drill",
+                "product_category": "Tools",
+                "unit_price": 2.5,
+                "quantity": 1,
+                "total_product_price": 2.5
+            },
+            {
+                "product_name": "HSS TWIST DRILL 6*160MM",
+                "product_type": "Drill",
+                "product_category": "Tools",
+                "unit_price": 3.3,
+                "quantity": 1,
+                "total_product_price": 3.3
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 35.66,
+            "gst": 2.14,
+            "other_taxes": 0.0,
+            "tax": 2.14,
+            "total_quantity": 4,
+            "total_price": 37.8,
+            "discount": 0.0
+        },
+        "_id": "680b641f76f09166ce1abb02",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:51.839000",
+        "updated_at": "2025-04-25T10:29:51.839000"
+    },
+    {
+        "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+        "invoice_number": "0010111111",
+        "invoice_date": "03/29/2018",
+        "products": [
+            {
+                "product_name": "PB SHT/P 11H A4 10'S C/O.",
+                "product_type": "Stationery",
+                "product_category": "Office Supplies",
+                "unit_price": 3.5,
+                "quantity": 2,
+                "total_product_price": 7.0
+            },
+            {
+                "product_name": "R RING 500'S",
+                "product_type": "Stationery",
+                "product_category": "Office Supplies",
+                "unit_price": 2.65,
+                "quantity": 1,
+                "total_product_price": 2.65
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.65,
+            "gst": 0.55,
+            "other_taxes": 0.0,
+            "tax": 0.55,
+            "total_quantity": 3,
+            "total_price": 9.65,
+            "discount": 0.0
+        },
+        "_id": "680b642576f09166ce1abb03",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:29:57.357000",
+        "updated_at": "2025-04-25T10:29:57.357000"
+    },
+    {
+        "vendor_name": "ADVANCO COMPANY",
+        "invoice_number": "398313",
+        "invoice_date": "03/23/2018",
+        "products": [
+            {
+                "product_name": "FUJI XEROX EVERYDAY A4 70GSM",
+                "product_type": "Paper",
+                "product_category": "Office Supplies",
+                "unit_price": 11.0,
+                "quantity": 5,
+                "total_product_price": 55.0
+            },
+            {
+                "product_name": "CANON PG-47BK E400 BLACK FINE",
+                "product_type": "Ink Cartridge",
+                "product_category": "Electronics",
+                "unit_price": 29.0,
+                "quantity": 1,
+                "total_product_price": 29.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 78.3,
+            "gst": 4.7,
+            "other_taxes": 0.0,
+            "tax": 4.7,
+            "total_quantity": 6,
+            "total_price": 83.0,
+            "discount": 1.0
+        },
+        "_id": "680b642a76f09166ce1abb04",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:02.277000",
+        "updated_at": "2025-04-25T10:30:02.277000"
+    },
+    {
+        "vendor_name": "MR. D.I.Y. SDN BHD",
+        "invoice_number": "R000011248",
+        "invoice_date": "11/24/2017",
+        "products": [
+            {
+                "product_name": "BATTERY LR03-4B AAA 4 PCS",
+                "product_type": "Battery",
+                "product_category": "Electronics",
+                "unit_price": 3.9,
+                "quantity": 1,
+                "total_product_price": 3.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 3.9,
+            "gst": 0.22,
+            "other_taxes": 0.0,
+            "tax": 0.22,
+            "total_quantity": 1,
+            "total_price": 3.9,
+            "discount": 0.0
+        },
+        "_id": "680b642e76f09166ce1abb05",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:06.892000",
+        "updated_at": "2025-04-25T10:30:06.892000"
+    },
+    {
+        "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+        "invoice_number": "CS00012441",
+        "invoice_date": "12/28/2017",
+        "products": [
+            {
+                "product_name": "1971",
+                "product_type": "None",
+                "product_category": "-",
+                "unit_price": 148.4,
+                "quantity": 1,
+                "total_product_price": 148.4
+            },
+            {
+                "product_name": "PASIR HALUS 1 LOAD (SMALL)",
+                "product_type": "LOAD",
+                "product_category": "Construction",
+                "unit_price": 148.4,
+                "quantity": 1,
+                "total_product_price": 148.4
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 140.0,
+            "gst": 8.4,
+            "other_taxes": 0.0,
+            "tax": 8.4,
+            "total_quantity": 1,
+            "total_price": 148.4,
+            "discount": 0.0
+        },
+        "_id": "680b643476f09166ce1abb06",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:12.119000",
+        "updated_at": "2025-04-25T10:30:12.119000"
+    },
+    {
+        "vendor_name": "AL MENDIS-THE MINES",
+        "invoice_number": "V001-515592",
+        "invoice_date": "03/21/2018",
+        "products": [
+            {
+                "product_name": "Maghgout Lamb w 1Sl",
+                "product_type": "Lamb",
+                "product_category": "Food",
+                "unit_price": 22.5,
+                "quantity": 1,
+                "total_product_price": 22.5
+            },
+            {
+                "product_name": "Garden Salad (S)",
+                "product_type": "Salad",
+                "product_category": "Food",
+                "unit_price": 5.9,
+                "quantity": 1,
+                "total_product_price": 5.9
+            },
+            {
+                "product_name": "TEA POT BIG",
+                "product_type": "Tea",
+                "product_category": "Beverage",
+                "unit_price": 12.9,
+                "quantity": 1,
+                "total_product_price": 12.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 41.3,
+            "gst": 2.73,
+            "other_taxes": 0.0,
+            "tax": 2.73,
+            "total_quantity": 3,
+            "total_price": 48.15,
+            "discount": 0.0
+        },
+        "_id": "680b643976f09166ce1abb07",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:17.837000",
+        "updated_at": "2025-04-25T10:30:17.837000"
+    },
+    {
+        "vendor_name": "VIVOPAC MARKETING SDN BHD",
+        "invoice_number": "CS11567459",
+        "invoice_date": "09/13/2017",
+        "products": [
+            {
+                "product_name": "Stretch Film (100mmx120m)",
+                "product_type": "Film",
+                "product_category": "Packaging",
+                "unit_price": 4.5,
+                "quantity": 1,
+                "total_product_price": 4.5
+            },
+            {
+                "product_name": "PP-16x26 0.04mm",
+                "product_type": "Packaging",
+                "product_category": "Materials",
+                "unit_price": 15.0,
+                "quantity": 1,
+                "total_product_price": 15.0
+            },
+            {
+                "product_name": "PP-14x20 0.04mm",
+                "product_type": "Packaging",
+                "product_category": "Materials",
+                "unit_price": 15.0,
+                "quantity": 2,
+                "total_product_price": 30.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 49.5,
+            "gst": 2.97,
+            "other_taxes": 0.0,
+            "tax": 2.97,
+            "total_quantity": 4,
+            "total_price": 52.45,
+            "discount": 0.0
+        },
+        "_id": "680b643f76f09166ce1abb08",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:23.841000",
+        "updated_at": "2025-04-25T10:30:23.841000"
+    },
+    {
+        "vendor_name": "FY EAGLE ENTERPRISE",
+        "invoice_number": "CS00031180",
+        "invoice_date": "04/12/2017",
+        "products": [
+            {
+                "product_name": "SR:TAPE OPP 48MMX8OY CLEAR(B.PY)-ECS",
+                "product_type": "Tape",
+                "product_category": "Office Supplies",
+                "unit_price": 3.5,
+                "quantity": 2,
+                "total_product_price": 7.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 6.6,
+            "gst": 0.4,
+            "other_taxes": 0.0,
+            "tax": 0.4,
+            "total_quantity": 2,
+            "total_price": 7.0,
+            "discount": 0.0
+        },
+        "_id": "680b644476f09166ce1abb09",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:28.812000",
+        "updated_at": "2025-04-25T10:30:28.812000"
+    },
+    {
+        "vendor_name": "HON HWA HARDWARE TRADING",
+        "invoice_number": "-",
+        "invoice_date": "08/02/2017",
+        "products": [
+            {
+                "product_name": "1\" TOWEL ROD BRACKET(END)",
+                "product_type": "TOWEL ROD BRACKET",
+                "product_category": "Household",
+                "unit_price": 6.0,
+                "quantity": 2,
+                "total_product_price": 12.0
+            },
+            {
+                "product_name": "3/4\" TOWEL ROD BRACKET",
+                "product_type": "TOWEL ROD BRACKET",
+                "product_category": "Household",
+                "unit_price": 4.0,
+                "quantity": 2,
+                "total_product_price": 8.0
+            },
+            {
+                "product_name": "3/4\" TOWEL ROD BRACKET(END)",
+                "product_type": "TOWEL ROD BRACKET",
+                "product_category": "Household",
+                "unit_price": 4.0,
+                "quantity": 5,
+                "total_product_price": 20.0
+            },
+            {
+                "product_name": "3/4\"TOWEL ROD BRACKET(ROUND)",
+                "product_type": "TOWEL ROD BRACKET",
+                "product_category": "Household",
+                "unit_price": 5.5,
+                "quantity": 4,
+                "total_product_price": 22.0
+            },
+            {
+                "product_name": "25MM X 10 WALL PLUG",
+                "product_type": "WALL PLUG",
+                "product_category": "Hardware",
+                "unit_price": 3.5,
+                "quantity": 1,
+                "total_product_price": 3.5
+            },
+            {
+                "product_name": "SANDFLEX SAW BLADE 18T",
+                "product_type": "SAW BLADE",
+                "product_category": "Hardware",
+                "unit_price": 4.5,
+                "quantity": 1,
+                "total_product_price": 4.5
+            },
+            {
+                "product_name": "SCREW",
+                "product_type": "SCREW",
+                "product_category": "Hardware",
+                "unit_price": 7.0,
+                "quantity": 1,
+                "total_product_price": 7.0
+            },
+            {
+                "product_name": "3/4\" V BRACKET",
+                "product_type": "V BRACKET",
+                "product_category": "Hardware",
+                "unit_price": 1.5,
+                "quantity": 5,
+                "total_product_price": 7.5
+            },
+            {
+                "product_name": "1\" S/STEEL ROD",
+                "product_type": "STEEL ROD",
+                "product_category": "Hardware",
+                "unit_price": 15.8,
+                "quantity": 6,
+                "total_product_price": 94.8
+            },
+            {
+                "product_name": "3/4\" ALUMINIUM ROD",
+                "product_type": "ALUMINIUM ROD",
+                "product_category": "Hardware",
+                "unit_price": 5.8,
+                "quantity": 17,
+                "total_product_price": 98.6
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 277.9,
+            "gst": 15.68,
+            "other_taxes": 0.0,
+            "tax": 15.68,
+            "total_quantity": 40,
+            "total_price": 277.0,
+            "discount": 0.9
+        },
+        "_id": "680b644c76f09166ce1abb0a",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:36.640000",
+        "updated_at": "2025-04-25T10:30:36.640000"
+    },
+    {
+        "vendor_name": "POPULAR BOOK",
+        "invoice_number": "7010385084",
+        "invoice_date": "07/01/2018",
+        "products": [
+            {
+                "product_name": "70g P.Copy 450'S",
+                "product_type": "Copy Paper",
+                "product_category": "Office Supplies",
+                "unit_price": 13.69,
+                "quantity": 3,
+                "total_product_price": 41.07
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 31.47,
+            "gst": 1.78,
+            "other_taxes": 0.0,
+            "tax": 1.78,
+            "total_quantity": 3,
+            "total_price": 31.45,
+            "discount": 9.6
+        },
+        "_id": "680b645176f09166ce1abb0b",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:41.447000",
+        "updated_at": "2025-04-25T10:30:41.447000"
+    },
+    {
+        "vendor_name": "TRI SHAAS SDN BHD",
+        "invoice_number": "255018",
+        "invoice_date": "03/13/2017",
+        "products": [
+            {
+                "product_name": "EVEREADY BAT H/D 1015 SW4 AA",
+                "product_type": "Batteries",
+                "product_category": "Electronics",
+                "unit_price": 2.5,
+                "quantity": 2,
+                "total_product_price": 5.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.0,
+            "gst": 0.28,
+            "other_taxes": 0.0,
+            "tax": 0.28,
+            "total_quantity": 2,
+            "total_price": 5.0,
+            "discount": 0.0
+        },
+        "_id": "680b645676f09166ce1abb0c",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:46.540000",
+        "updated_at": "2025-04-25T10:30:46.540000"
+    },
+    {
+        "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+        "invoice_number": "9020374693",
+        "invoice_date": "08/20/2017",
+        "products": [
+            {
+                "product_name": "H'MAN GLASS PAPER",
+                "product_type": "GLASS PAPER",
+                "product_category": "Stationery",
+                "unit_price": 1.4,
+                "quantity": 4,
+                "total_product_price": 5.6
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.04,
+            "gst": 0.29,
+            "other_taxes": 0.0,
+            "tax": 0.29,
+            "total_quantity": 4,
+            "total_price": 5.05,
+            "discount": 0.56
+        },
+        "_id": "680b646076f09166ce1abb0d",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:30:56.448000",
+        "updated_at": "2025-04-25T10:30:56.448000"
+    },
+    {
+        "vendor_name": "EVERGREEN LIGHT SDN BHD",
+        "invoice_number": "142507",
+        "invoice_date": "09/18/2017",
+        "products": [
+            {
+                "product_name": "PROEMK 10W LED STICK",
+                "product_type": "LED STICK",
+                "product_category": "Electronics",
+                "unit_price": 12.26,
+                "quantity": 2,
+                "total_product_price": 24.52
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 24.52,
+            "gst": 1.47,
+            "other_taxes": 0.0,
+            "tax": 1.47,
+            "total_quantity": 2,
+            "total_price": 26.0,
+            "discount": 0.0
+        },
+        "_id": "680b646576f09166ce1abb0e",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:01.391000",
+        "updated_at": "2025-04-25T10:31:01.391000"
+    },
+    {
+        "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+        "invoice_number": "0040081037",
+        "invoice_date": "03/14/2018",
+        "products": [
+            {
+                "product_name": "CBE Rubber Band200gm",
+                "product_type": "Rubber Band",
+                "product_category": "Office Supplies",
+                "unit_price": 7.95,
+                "quantity": 1,
+                "total_product_price": 7.95
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 7.95,
+            "gst": 0.45,
+            "other_taxes": 0.0,
+            "tax": 0.45,
+            "total_quantity": 1,
+            "total_price": 7.95,
+            "discount": 0.0
+        },
+        "_id": "680b646a76f09166ce1abb0f",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:06.416000",
+        "updated_at": "2025-04-25T10:31:06.416000"
+    },
+    {
+        "vendor_name": "AEON CO. (M) BHD",
+        "invoice_number": "2018020951320023885",
+        "invoice_date": "09/02/2018",
+        "products": [
+            {
+                "product_name": "STERILE FILTRAT",
+                "product_type": "Filtrat",
+                "product_category": "Household",
+                "unit_price": 5.9,
+                "quantity": 1,
+                "total_product_price": 5.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.9,
+            "gst": 0.33,
+            "other_taxes": 0.0,
+            "tax": 0.33,
+            "total_quantity": 1,
+            "total_price": 5.57,
+            "discount": 0.0
+        },
+        "_id": "680b646f76f09166ce1abb10",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:11.419000",
+        "updated_at": "2025-04-25T10:31:11.419000"
+    },
+    {
+        "vendor_name": "MR. D.I.Y. SDN BHD",
+        "invoice_number": "-",
+        "invoice_date": "10/18/2017",
+        "products": [
+            {
+                "product_name": "CLOTH PEG E-140",
+                "product_type": "PEG",
+                "product_category": "Household",
+                "unit_price": 5.9,
+                "quantity": 1,
+                "total_product_price": 5.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.57,
+            "gst": 0.33,
+            "other_taxes": 0.0,
+            "tax": 0.33,
+            "total_quantity": 1,
+            "total_price": 5.9,
+            "discount": 0.0
+        },
+        "_id": "680b647476f09166ce1abb11",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:16.459000",
+        "updated_at": "2025-04-25T10:31:16.459000"
+    },
+    {
+        "vendor_name": "MR.D.I.Y(M)SDN BHD",
+        "invoice_number": "-",
+        "invoice_date": "09/19/2017",
+        "products": [
+            {
+                "product_name": "TOILET BRUSH 47-2311",
+                "product_type": "Brush",
+                "product_category": "Household",
+                "unit_price": 2.7,
+                "quantity": 1,
+                "total_product_price": 2.7
+            },
+            {
+                "product_name": "CEMENT KN BLK-2",
+                "product_type": "Cement",
+                "product_category": "Construction",
+                "unit_price": 1.6,
+                "quantity": 1,
+                "total_product_price": 1.6
+            },
+            {
+                "product_name": "HSS TWIST DRILL 5.5*",
+                "product_type": "Drill",
+                "product_category": "Tools",
+                "unit_price": 3.3,
+                "quantity": 1,
+                "total_product_price": 3.3
+            },
+            {
+                "product_name": "HSS TWIST DRILL 6*1",
+                "product_type": "Drill",
+                "product_category": "Tools",
+                "unit_price": 3.3,
+                "quantity": 1,
+                "total_product_price": 3.3
+            },
+            {
+                "product_name": "CURTAIN STRAPS",
+                "product_type": "Straps",
+                "product_category": "Home Decor",
+                "unit_price": 2.5,
+                "quantity": 2,
+                "total_product_price": 5.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 15.9,
+            "gst": 0.9,
+            "other_taxes": 0.0,
+            "tax": 0.9,
+            "total_quantity": 6,
+            "total_price": 15.9,
+            "discount": 0.0
+        },
+        "_id": "680b647a76f09166ce1abb12",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:22.596000",
+        "updated_at": "2025-04-25T10:31:22.596000"
+    },
+    {
+        "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+        "invoice_number": "CS00011955",
+        "invoice_date": "02/12/2017",
+        "products": [
+            {
+                "product_name": "SPRAY PAINT",
+                "product_type": "PAINT",
+                "product_category": "Household",
+                "unit_price": 7.42,
+                "quantity": 1,
+                "total_product_price": 7.42
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 7.0,
+            "gst": 0.42,
+            "other_taxes": 0.0,
+            "tax": 0.42,
+            "total_quantity": 1,
+            "total_price": 7.42,
+            "discount": 0.0
+        },
+        "_id": "680b647f76f09166ce1abb13",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:27.493000",
+        "updated_at": "2025-04-25T10:31:27.493000"
+    },
+    {
+        "vendor_name": "SWEET FOREST CAFE",
+        "invoice_number": "593101",
+        "invoice_date": "02/14/2018",
+        "products": [
+            {
+                "product_name": "Smoked Duck Spaghetti",
+                "product_type": "Spaghetti",
+                "product_category": "Food",
+                "unit_price": 12.5,
+                "quantity": 1,
+                "total_product_price": 12.5
+            },
+            {
+                "product_name": "Hot Green Tea",
+                "product_type": "Tea",
+                "product_category": "Beverage",
+                "unit_price": 3.0,
+                "quantity": 1,
+                "total_product_price": 3.0
+            },
+            {
+                "product_name": "Coffee(H)",
+                "product_type": "Coffee",
+                "product_category": "Beverage",
+                "unit_price": 4.9,
+                "quantity": 1,
+                "total_product_price": 4.9
+            },
+            {
+                "product_name": "Rendang Chicken Rice",
+                "product_type": "Rice",
+                "product_category": "Food",
+                "unit_price": 9.9,
+                "quantity": 1,
+                "total_product_price": 9.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 28.58,
+            "gst": 1.72,
+            "other_taxes": 0.0,
+            "tax": 1.72,
+            "total_quantity": 4,
+            "total_price": 30.3,
+            "discount": 0.0
+        },
+        "_id": "680b648576f09166ce1abb14",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:33.132000",
+        "updated_at": "2025-04-25T10:31:33.132000"
+    },
+    {
+        "vendor_name": "LIM SENG THO HARDWARE TRADING",
+        "invoice_number": "CS 24198",
+        "invoice_date": "03/02/2018",
+        "products": [
+            {
+                "product_name": "BEG GUNI",
+                "product_type": "GUNI",
+                "product_category": "Hardware",
+                "unit_price": 0.7,
+                "quantity": 10,
+                "total_product_price": 7.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 7.0,
+            "gst": 0.4,
+            "other_taxes": 0.0,
+            "tax": 0.4,
+            "total_quantity": 10,
+            "total_price": 0.0,
+            "discount": 0.0
+        },
+        "_id": "680b648e76f09166ce1abb15",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:42.573000",
+        "updated_at": "2025-04-25T10:31:42.573000"
+    },
+    {
+        "vendor_name": "LIM SENG THO HARDWARE TRADING",
+        "invoice_number": "CS 24358",
+        "invoice_date": "08/02/2018",
+        "products": [
+            {
+                "product_name": "BEG GUNI",
+                "product_type": "GUNI",
+                "product_category": "-",
+                "unit_price": 0.7,
+                "quantity": 15,
+                "total_product_price": 10.5
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 10.5,
+            "gst": 0.59,
+            "other_taxes": 0.0,
+            "tax": 0.59,
+            "total_quantity": 15,
+            "total_price": 0.0,
+            "discount": 0.0
+        },
+        "_id": "680b649376f09166ce1abb16",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:47.153000",
+        "updated_at": "2025-04-25T10:31:47.153000"
+    },
+    {
+        "vendor_name": "LIM SENG THO HARDWARE TRADING",
+        "invoice_number": "CS 24146",
+        "invoice_date": "02/02/2018",
+        "products": [
+            {
+                "product_name": "BEG GUNI",
+                "product_type": "GUNI",
+                "product_category": "Household",
+                "unit_price": 0.7,
+                "quantity": 10,
+                "total_product_price": 7.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 7.0,
+            "gst": 0.4,
+            "other_taxes": 0.0,
+            "tax": 0.4,
+            "total_quantity": 10,
+            "total_price": 0.0,
+            "discount": 0.0
+        },
+        "_id": "680b649776f09166ce1abb17",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:51.958000",
+        "updated_at": "2025-04-25T10:31:51.958000"
+    },
+    {
+        "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+        "invoice_number": "CS00011983",
+        "invoice_date": "04/12/2017",
+        "products": [
+            {
+                "product_name": "25KG SIKA CREAM -88",
+                "product_type": "CREAM",
+                "product_category": "-",
+                "unit_price": 15.9,
+                "quantity": 3,
+                "total_product_price": 47.7
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 45.0,
+            "gst": 2.7,
+            "other_taxes": 0.0,
+            "tax": 2.7,
+            "total_quantity": 3,
+            "total_price": 47.7,
+            "discount": 0.0
+        },
+        "_id": "680b649c76f09166ce1abb18",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:31:56.710000",
+        "updated_at": "2025-04-25T10:31:56.710000"
+    },
+    {
+        "vendor_name": "Chili's",
+        "invoice_number": "1080323",
+        "invoice_date": "12/30/2017",
+        "products": [
+            {
+                "product_name": "PINEAPPLE JUICE",
+                "product_type": "Juice",
+                "product_category": "Beverage",
+                "unit_price": 12.95,
+                "quantity": 1,
+                "total_product_price": 12.95
+            },
+            {
+                "product_name": "TOSTADA CHIPS",
+                "product_type": "Chips",
+                "product_category": "Food",
+                "unit_price": 16.95,
+                "quantity": 1,
+                "total_product_price": 16.95
+            },
+            {
+                "product_name": "CHP_BWL CK",
+                "product_type": "Food",
+                "product_category": "Food",
+                "unit_price": 29.95,
+                "quantity": 1,
+                "total_product_price": 29.95
+            },
+            {
+                "product_name": "MARG CK",
+                "product_type": "Food",
+                "product_category": "Food",
+                "unit_price": 27.95,
+                "quantity": 1,
+                "total_product_price": 27.95
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 87.8,
+            "gst": 5.81,
+            "other_taxes": 0.0,
+            "tax": 5.81,
+            "total_quantity": 4,
+            "total_price": 102.4,
+            "discount": 0.0
+        },
+        "_id": "680b64a276f09166ce1abb19",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:02.509000",
+        "updated_at": "2025-04-25T10:32:02.509000"
+    },
+    {
+        "vendor_name": "BEYOND BROTHERS HARDWARE",
+        "invoice_number": "-",
+        "invoice_date": "03/14/2018",
+        "products": [
+            {
+                "product_name": "BATU CEMENT (A) 600PCS",
+                "product_type": "Cement",
+                "product_category": "Building Materials",
+                "unit_price": 150.0,
+                "quantity": 1,
+                "total_product_price": 159.0
+            },
+            {
+                "product_name": "PASIR HALUS",
+                "product_type": "Sand",
+                "product_category": "Building Materials",
+                "unit_price": 80.0,
+                "quantity": 2,
+                "total_product_price": 169.6
+            },
+            {
+                "product_name": "YTL CEMENT 50KG (NEW PRICE)",
+                "product_type": "Cement",
+                "product_category": "Building Materials",
+                "unit_price": 16.0,
+                "quantity": 6,
+                "total_product_price": 101.76
+            },
+            {
+                "product_name": "KAPUR A1",
+                "product_type": "Lime",
+                "product_category": "Building Materials",
+                "unit_price": 3.0,
+                "quantity": 1,
+                "total_product_price": 3.18
+            },
+            {
+                "product_name": "SALUNG TANGAN GETAH (1PAIR)",
+                "product_type": "Gloves",
+                "product_category": "Tools",
+                "unit_price": 3.0,
+                "quantity": 2,
+                "total_product_price": 6.36
+            },
+            {
+                "product_name": "BENANG NYLON #18",
+                "product_type": "Nylon Thread",
+                "product_category": "Crafts",
+                "unit_price": 2.0,
+                "quantity": 1,
+                "total_product_price": 2.12
+            },
+            {
+                "product_name": "GERMANY SUDU PLASTER",
+                "product_type": "Plaster Trowel",
+                "product_category": "Tools",
+                "unit_price": 16.0,
+                "quantity": 1,
+                "total_product_price": 16.96
+            },
+            {
+                "product_name": "SUDU PLASTER KAYU (NORMAL)",
+                "product_type": "Plaster Trowel",
+                "product_category": "Tools",
+                "unit_price": 6.9,
+                "quantity": 1,
+                "total_product_price": 7.31
+            },
+            {
+                "product_name": "PAPAN SIMEN (HITAM)",
+                "product_type": "Cement Board",
+                "product_category": "Building Materials",
+                "unit_price": 4.5,
+                "quantity": 1,
+                "total_product_price": 4.77
+            },
+            {
+                "product_name": "MIMAN RULE TIMBANG 18\"",
+                "product_type": "Measuring Tool",
+                "product_category": "Tools",
+                "unit_price": 19.9,
+                "quantity": 1,
+                "total_product_price": 21.09
+            },
+            {
+                "product_name": "KERETA TOLAK H/D (OREN)",
+                "product_type": "Wheelbarrow",
+                "product_category": "Tools",
+                "unit_price": 100.0,
+                "quantity": 1,
+                "total_product_price": 106.0
+            },
+            {
+                "product_name": "PAKU KAYU 1\" (KECIL)",
+                "product_type": "Nails",
+                "product_category": "Hardware",
+                "unit_price": 1.2,
+                "quantity": 1,
+                "total_product_price": 1.27
+            },
+            {
+                "product_name": "MAYBANK- 5122 0481 6723",
+                "product_type": "-",
+                "product_category": "-",
+                "unit_price": 0.0,
+                "quantity": 1,
+                "total_product_price": 0.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 565.5,
+            "gst": 33.93,
+            "other_taxes": 0.0,
+            "tax": 33.93,
+            "total_quantity": 20,
+            "total_price": 599.45,
+            "discount": 0.0
+        },
+        "_id": "680b64ac76f09166ce1abb1a",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:12.243000",
+        "updated_at": "2025-04-25T10:32:12.243000"
+    },
+    {
+        "vendor_name": "PREMIO STATIONERY SDN BHD",
+        "invoice_number": "SS3-154439",
+        "invoice_date": "03/20/2018",
+        "products": [
+            {
+                "product_name": "1 SR ENERGIZER BATTERY AA 4'S",
+                "product_type": "Battery",
+                "product_category": "Electronics",
+                "unit_price": 13.4,
+                "quantity": 1,
+                "total_product_price": 13.4
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 13.4,
+            "gst": 0.76,
+            "other_taxes": 0.0,
+            "tax": 0.76,
+            "total_quantity": 1,
+            "total_price": 13.4,
+            "discount": 0.0
+        },
+        "_id": "680b64b076f09166ce1abb1b",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:16.594000",
+        "updated_at": "2025-04-25T10:32:16.594000"
+    },
+    {
+        "vendor_name": "IKANO HANDEL SDN BHD",
+        "invoice_number": "0000000111000395667",
+        "invoice_date": "12/23/2017",
+        "products": [
+            {
+                "product_name": "910347623 Almond Cak",
+                "product_type": "Cak",
+                "product_category": "Food",
+                "unit_price": 22.5,
+                "quantity": 1,
+                "total_product_price": 22.5
+            },
+            {
+                "product_name": "999900245 IKEA Retai",
+                "product_type": "Retai",
+                "product_category": "Retail",
+                "unit_price": 36.0,
+                "quantity": 1,
+                "total_product_price": 36.0
+            },
+            {
+                "product_name": "599937000 TKEA Drink",
+                "product_type": "Drink",
+                "product_category": "Beverage",
+                "unit_price": 1.0,
+                "quantity": 1,
+                "total_product_price": 1.0
+            },
+            {
+                "product_name": "999900701 Dark Chocolate 70% U",
+                "product_type": "Chocolate",
+                "product_category": "Food",
+                "unit_price": 6.9,
+                "quantity": 2,
+                "total_product_price": 13.8
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 73.3,
+            "gst": 4.15,
+            "other_taxes": 0.0,
+            "tax": 4.15,
+            "total_quantity": 5,
+            "total_price": 73.3,
+            "discount": 0.0
+        },
+        "_id": "680b64b676f09166ce1abb1c",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:22.773000",
+        "updated_at": "2025-04-25T10:32:22.773000"
+    },
+    {
+        "vendor_name": "AEON CO. (M) BHD",
+        "invoice_number": "2018031430090060035",
+        "invoice_date": "03/14/2018",
+        "products": [
+            {
+                "product_name": "TOPVALU FLOOR C",
+                "product_type": "Floor Cleaner",
+                "product_category": "Household",
+                "unit_price": 6.65,
+                "quantity": 1,
+                "total_product_price": 6.65
+            },
+            {
+                "product_name": "CIF REGULAR 50",
+                "product_type": "Cleaner",
+                "product_category": "Household",
+                "unit_price": 5.6,
+                "quantity": 1,
+                "total_product_price": 5.6
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 12.25,
+            "gst": 0.7,
+            "other_taxes": 0.0,
+            "tax": 0.7,
+            "total_quantity": 2,
+            "total_price": 12.25,
+            "discount": 0.0
+        },
+        "_id": "680b64bc76f09166ce1abb1d",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:28.004000",
+        "updated_at": "2025-04-25T10:32:28.004000"
+    },
+    {
+        "vendor_name": "MODERN DEPOT SDN BHD",
+        "invoice_number": "CS00090733",
+        "invoice_date": "04/12/2016",
+        "products": [
+            {
+                "product_name": "CLSTEL670 SR:STEL670 HEATGUN 200OW \"STANLEY\" S/N: 031274",
+                "product_type": "Heatgun",
+                "product_category": "Tools",
+                "unit_price": 141.51,
+                "quantity": 1,
+                "total_product_price": 141.51
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 141.51,
+            "gst": 8.49,
+            "other_taxes": 0.0,
+            "tax": 8.49,
+            "total_quantity": 1,
+            "total_price": 150.0,
+            "discount": 0.0
+        },
+        "_id": "680b64c176f09166ce1abb1e",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:33.020000",
+        "updated_at": "2025-04-25T10:32:33.020000"
+    },
+    {
+        "vendor_name": "WAHIN HARDWARE SDN BHD",
+        "invoice_number": "CS0013132",
+        "invoice_date": "04/12/2017",
+        "products": [
+            {
+                "product_name": "14\" MINI ROLLER REFILL",
+                "product_type": "ROLLER REFILL",
+                "product_category": "Hardware",
+                "unit_price": 2.65,
+                "quantity": 2,
+                "total_product_price": 5.3
+            },
+            {
+                "product_name": "24\"X18\" ROLLERPAINT HANDLE",
+                "product_type": "ROLLERPAINT HANDLE",
+                "product_category": "Hardware",
+                "unit_price": 3.18,
+                "quantity": 2,
+                "total_product_price": 6.36
+            },
+            {
+                "product_name": "33.5LRT BLACK OXIDE PAINT",
+                "product_type": "BLACK OXIDE PAINT",
+                "product_category": "Hardware",
+                "unit_price": 30.74,
+                "quantity": 1,
+                "total_product_price": 30.74
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 42.4,
+            "gst": 2.4,
+            "other_taxes": 0.0,
+            "tax": 2.4,
+            "total_quantity": 5,
+            "total_price": 42.4,
+            "discount": 0.0
+        },
+        "_id": "680b64c776f09166ce1abb1f",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:39.172000",
+        "updated_at": "2025-04-25T10:32:39.172000"
+    },
+    {
+        "vendor_name": "FY EAGLE ENTERPRISE",
+        "invoice_number": "CS00031383",
+        "invoice_date": "07/12/2017",
+        "products": [
+            {
+                "product_name": "SR:500ML PAINT REMOVER(M.TE)-ΚΤΗ",
+                "product_type": "PAINT REMOVER",
+                "product_category": "Household",
+                "unit_price": 10.0,
+                "quantity": 1,
+                "total_product_price": 10.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 9.43,
+            "gst": 0.57,
+            "other_taxes": 0.0,
+            "tax": 0.57,
+            "total_quantity": 1,
+            "total_price": 10.0,
+            "discount": 0.0
+        },
+        "_id": "680b64cc76f09166ce1abb20",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:44.125000",
+        "updated_at": "2025-04-25T10:32:44.125000"
+    },
+    {
+        "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+        "invoice_number": "CS00011926",
+        "invoice_date": "02/12/2017",
+        "products": [
+            {
+                "product_name": "3122 (W33) 105MM/4' CUTTING DISC",
+                "product_type": "CUTTING DISC",
+                "product_category": "Tools",
+                "unit_price": 29.68,
+                "quantity": 1,
+                "total_product_price": 29.68
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 28.0,
+            "gst": 1.68,
+            "other_taxes": 0.0,
+            "tax": 1.68,
+            "total_quantity": 1,
+            "total_price": 29.68,
+            "discount": 0.0
+        },
+        "_id": "680b64d176f09166ce1abb21",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:49.093000",
+        "updated_at": "2025-04-25T10:32:49.093000"
+    },
+    {
+        "vendor_name": "EVERGREEN LIGHT SDN BHD",
+        "invoice_number": "139110",
+        "invoice_date": "10/07/2017",
+        "products": [
+            {
+                "product_name": "11598\nPROEMK 10W LED STICK",
+                "product_type": "LED STICK",
+                "product_category": "Electronics",
+                "unit_price": 13.21,
+                "quantity": 4,
+                "total_product_price": 52.84
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 52.84,
+            "gst": 3.17,
+            "other_taxes": 0.0,
+            "tax": 3.17,
+            "total_quantity": 4,
+            "total_price": 56.0,
+            "discount": 0.0
+        },
+        "_id": "680b64d576f09166ce1abb22",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:53.714000",
+        "updated_at": "2025-04-25T10:32:53.714000"
+    },
+    {
+        "vendor_name": "IKANO HANDEL SDN BHD",
+        "invoice_number": "0000000011000136498",
+        "invoice_date": "07/27/2017",
+        "products": [
+            {
+                "product_name": "50346155 BOSTRAK WRD 80X50X18",
+                "product_type": "BOSTRAK WRD",
+                "product_category": "Furniture",
+                "unit_price": 269.0,
+                "quantity": 2,
+                "total_product_price": 538.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 538.0,
+            "gst": 30.45,
+            "other_taxes": 0.0,
+            "tax": 30.45,
+            "total_quantity": 2,
+            "total_price": 538.0,
+            "discount": 0.0
+        },
+        "_id": "680b64da76f09166ce1abb23",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:32:58.666000",
+        "updated_at": "2025-04-25T10:32:58.666000"
+    },
+    {
+        "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+        "invoice_number": "0020070154",
+        "invoice_date": "12/01/2018",
+        "products": [
+            {
+                "product_name": "70g P. Copy 450'S",
+                "product_type": "Copy Paper",
+                "product_category": "Office Supplies",
+                "unit_price": 13.69,
+                "quantity": 2,
+                "total_product_price": 27.38
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 20.98,
+            "gst": 1.19,
+            "other_taxes": 0.0,
+            "tax": 1.19,
+            "total_quantity": 2,
+            "total_price": 21.0,
+            "discount": 6.4
+        },
+        "_id": "680b64df76f09166ce1abb24",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:33:03.750000",
+        "updated_at": "2025-04-25T10:33:03.750000"
+    },
+    {
+        "vendor_name": "AEON CO. (M) BHD.",
+        "invoice_number": "2018032251310415556",
+        "invoice_date": "03/22/2018",
+        "products": [
+            {
+                "product_name": "WET TISSUE 150S",
+                "product_type": "WET TISSUE",
+                "product_category": "Household",
+                "unit_price": 5.9,
+                "quantity": 1,
+                "total_product_price": 5.9
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.9,
+            "gst": 0.33,
+            "other_taxes": 0.0,
+            "tax": 0.33,
+            "total_quantity": 1,
+            "total_price": 5.9,
+            "discount": 0.0
+        },
+        "_id": "680b64e976f09166ce1abb25",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:33:13.211000",
+        "updated_at": "2025-04-25T10:33:13.211000"
+    },
+    {
+        "vendor_name": "VIVOPAC MARKETING SDN BHD",
+        "invoice_number": "CS21539777",
+        "invoice_date": "05/30/2017",
+        "products": [
+            {
+                "product_name": "9 x 13 (10A)",
+                "product_type": "Label",
+                "product_category": "Office Supplies",
+                "unit_price": 0.75,
+                "quantity": 1,
+                "total_product_price": 0.75
+            },
+            {
+                "product_name": "26 x 33 (85HT) Red",
+                "product_type": "Label",
+                "product_category": "Office Supplies",
+                "unit_price": 8.0,
+                "quantity": 1,
+                "total_product_price": 8.0
+            },
+            {
+                "product_name": "24 x 28 (75HT) Red",
+                "product_type": "Label",
+                "product_category": "Office Supplies",
+                "unit_price": 6.0,
+                "quantity": 1,
+                "total_product_price": 6.0
+            },
+            {
+                "product_name": "Price Label (PLAIN)",
+                "product_type": "Label",
+                "product_category": "Office Supplies",
+                "unit_price": 1.5,
+                "quantity": 2,
+                "total_product_price": 3.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 17.75,
+            "gst": 1.07,
+            "other_taxes": 0.0,
+            "tax": 1.07,
+            "total_quantity": 5,
+            "total_price": 18.8,
+            "discount": 0.0
+        },
+        "_id": "680b64ef76f09166ce1abb26",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:33:19.355000",
+        "updated_at": "2025-04-25T10:33:19.355000"
+    },
+    {
+        "vendor_name": "VIVOPAC MARKETING SDN BHD",
+        "invoice_number": "CS21532619",
+        "invoice_date": "01/17/2017",
+        "products": [
+            {
+                "product_name": "PP-14x20 0.04mm",
+                "product_type": "PP",
+                "product_category": "Packaging",
+                "unit_price": 14.6,
+                "quantity": 1,
+                "total_product_price": 14.6
+            },
+            {
+                "product_name": "PP-16x26 0.04mm",
+                "product_type": "PP",
+                "product_category": "Packaging",
+                "unit_price": 14.6,
+                "quantity": 1,
+                "total_product_price": 14.6
+            },
+            {
+                "product_name": "24 x 28 (75HT) Red",
+                "product_type": "Red",
+                "product_category": "Color Coded",
+                "unit_price": 6.0,
+                "quantity": 1,
+                "total_product_price": 6.0
+            },
+            {
+                "product_name": "26 x 33 (85HT) Red",
+                "product_type": "Red",
+                "product_category": "Color Coded",
+                "unit_price": 8.0,
+                "quantity": 1,
+                "total_product_price": 8.0
+            },
+            {
+                "product_name": "1 OPP Tapes",
+                "product_type": "Tapes",
+                "product_category": "Stationery",
+                "unit_price": 0.8,
+                "quantity": 1,
+                "total_product_price": 0.8
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 44.0,
+            "gst": 2.64,
+            "other_taxes": 0.0,
+            "tax": 2.64,
+            "total_quantity": 5,
+            "total_price": 46.65,
+            "discount": 0.0
+        },
+        "_id": "680b64f576f09166ce1abb27",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:33:25.748000",
+        "updated_at": "2025-04-25T10:33:25.748000"
+    },
+    {
+        "vendor_name": "ECONSAVE",
+        "invoice_number": "220318/10049/04/24382",
+        "invoice_date": "03/22/2018",
+        "products": [
+            {
+                "product_name": "(NR)ES CHOICE SOFT",
+                "product_type": "SOFT",
+                "product_category": "-",
+                "unit_price": 4.2,
+                "quantity": 1,
+                "total_product_price": 4.2
+            },
+            {
+                "product_name": "(NR)ES ICE COOL MI",
+                "product_type": "ICE COOL MI",
+                "product_category": "-",
+                "unit_price": 0.95,
+                "quantity": 1,
+                "total_product_price": 0.95
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 5.15,
+            "gst": 0.29,
+            "other_taxes": 0.0,
+            "tax": 0.29,
+            "total_quantity": 2,
+            "total_price": 5.2,
+            "discount": 0.0
+        },
+        "_id": "680b64fa76f09166ce1abb28",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:33:30.662000",
+        "updated_at": "2025-04-25T10:33:30.662000"
+    },
+    {
+        "vendor_name": "OJC MARKETING SDN BHD",
+        "invoice_number": "PEGIV-1030531",
+        "invoice_date": "02/01/2019",
+        "products": [
+            {
+                "product_name": "000000111",
+                "product_type": "None",
+                "product_category": "-",
+                "unit_price": 170.0,
+                "quantity": 1,
+                "total_product_price": 170.0
+            },
+            {
+                "product_name": "KINGS SAFETY SHOES KWD 805",
+                "product_type": "Shoes",
+                "product_category": "Apparel",
+                "unit_price": 170.0,
+                "quantity": 0,
+                "total_product_price": 0.0
+            }
+        ],
+        "invoice_summary": {
+            "sub_total": 170.0,
+            "gst": 0.0,
+            "other_taxes": 0.0,
+            "tax": 0.0,
+            "total_quantity": 1,
+            "total_price": 170.0,
+            "discount": 0.0
+        },
+        "_id": "680b67d27631e6b8f0c7e3cf",
+        "user_id": "testasharib",
+        "created_at": "2025-04-25T10:45:38.428000",
+        "updated_at": "2025-04-25T10:45:38.428000"
+    }
+]
