@@ -10,10 +10,13 @@ from fastdtw import fastdtw
 import whisper
 from datetime import datetime
 from typing import Dict, Any
-import tempfile
 import cloudinary
 import cloudinary.uploader
 from app.config import settings
+import io
+import soundfile as sf
+from pydub import AudioSegment
+import tempfile
 
 class ArabicAccentComparator:
     def __init__(self):
@@ -25,30 +28,50 @@ class ArabicAccentComparator:
         self.SAMPLE_RATE = 16000
         self.MFCC_N = 13
 
-    def load_audio(self, audio_content: bytes) -> tuple:
-        """Load audio from bytes"""
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as tmp_file:
-            tmp_file.write(audio_content)
-            tmp_file.flush()
-            
-            waveform, sample_rate = torchaudio.load(tmp_file.name)
-            
-            if sample_rate != self.SAMPLE_RATE:
-                resampler = torchaudio.transforms.Resample(
-                    orig_freq=sample_rate, new_freq=self.SAMPLE_RATE
-                )
-                waveform = resampler(waveform)
-            
-            if waveform.shape[0] > 1:
-                waveform = torch.mean(waveform, dim=0, keepdim=True)
-            
-            os.unlink(tmp_file.name)
-            return waveform.numpy().squeeze(), self.SAMPLE_RATE
+    def load_audio_from_bytes(self, audio_content: bytes) -> tuple:
+        """Load audio from bytes without temporary files"""
+        try:
+            # Try to load with soundfile first
+            with io.BytesIO(audio_content) as audio_buffer:
+                try:
+                    y, sr = sf.read(audio_buffer)
+                    # Convert to mono if stereo
+                    if len(y.shape) > 1:
+                        y = np.mean(y, axis=1)
+                    # Resample if needed
+                    if sr != self.SAMPLE_RATE:
+                        y = librosa.resample(y, orig_sr=sr, target_sr=self.SAMPLE_RATE)
+                    return y, self.SAMPLE_RATE
+                except:
+                    # Fallback to torchaudio for other formats
+                    audio_buffer.seek(0)
+                    waveform, sr = torchaudio.load(audio_buffer)
+                    
+                    # Convert to numpy
+                    if isinstance(waveform, torch.Tensor):
+                        waveform = waveform.numpy()
+                    
+                    # Convert to mono
+                    if waveform.shape[0] > 1:
+                        waveform = np.mean(waveform, axis=0)
+                    else:
+                        waveform = waveform.squeeze()
+                    
+                    # Resample if needed
+                    if sr != self.SAMPLE_RATE:
+                        waveform = librosa.resample(waveform, orig_sr=sr, target_sr=self.SAMPLE_RATE)
+                    
+                    return waveform, self.SAMPLE_RATE
+                    
+        except Exception as e:
+            raise ValueError(f"Failed to load audio: {str(e)}")
 
     def extract_speaker_embedding(self, audio_content: bytes) -> np.ndarray:
         """Extract speaker embedding"""
-        waveform, _ = self.load_audio(audio_content)
-        waveform = torch.tensor(waveform).unsqueeze(0)
+        y, sr = self.load_audio_from_bytes(audio_content)
+        
+        # Convert to tensor format expected by speechbrain
+        waveform = torch.tensor(y).unsqueeze(0).float()
         embedding = self.speaker_model.encode_batch(waveform)
         return embedding.squeeze(0).cpu().numpy()
 
@@ -62,7 +85,7 @@ class ArabicAccentComparator:
 
     def extract_acoustic_features(self, audio_content: bytes) -> Dict[str, Any]:
         """Extract acoustic features"""
-        y, sr = self.load_audio(audio_content)
+        y, sr = self.load_audio_from_bytes(audio_content)
         
         features = {
             "rms_energy": librosa.feature.rms(y=y)[0],
@@ -108,17 +131,25 @@ class ArabicAccentComparator:
         return comparisons
 
     def transcribe_audio(self, audio_content: bytes) -> str:
-        """Transcribe Arabic audio"""
+        """Transcribe Arabic audio without temporary files"""
         if self.whisper_model is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
-            self.whisper_model = whisper.load_model("medium", device=device)
+            self.whisper_model = whisper.load_model("small", device=device)
         
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as tmp_file:
-            tmp_file.write(audio_content)
-            tmp_file.flush()
-            result = self.whisper_model.transcribe(tmp_file.name, language="ar")
-            os.unlink(tmp_file.name)
-            return result["text"]
+        # Convert audio to the format whisper expects (16kHz mono WAV)
+        y, sr = self.load_audio_from_bytes(audio_content)
+        
+        # Whisper expects float32 audio in the range [-1, 1]
+        if y.dtype != np.float32:
+            y = y.astype(np.float32)
+        
+        # Normalize if needed
+        if np.max(np.abs(y)) > 1.0:
+            y = y / np.max(np.abs(y))
+        
+        # Transcribe directly from numpy array
+        result = self.whisper_model.transcribe(y, language="ar")
+        return result["text"]
 
     def compare_pronunciation(self, text1: str, text2: str) -> Dict[str, Any]:
         """Compare pronunciation"""
@@ -151,8 +182,8 @@ class ArabicAccentComparator:
         import matplotlib.pyplot as plt
         import librosa.display
         
-        y1, sr1 = self.load_audio(audio_content1)
-        y2, sr2 = self.load_audio(audio_content2)
+        y1, sr1 = self.load_audio_from_bytes(audio_content1)
+        y2, sr2 = self.load_audio_from_bytes(audio_content2)
         
         plt.figure(figsize=(15, 10))
         
@@ -185,67 +216,71 @@ class ArabicAccentComparator:
 
         plt.tight_layout()
         
-        # Save to temporary file and upload to Cloudinary
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as tmp_file:
-            plt.savefig(tmp_file.name, dpi=300, bbox_inches='tight')
+        # Save to temporary bytes buffer and upload to Cloudinary
+        with io.BytesIO() as buffer:
+            plt.savefig(buffer, format='png', dpi=300, bbox_inches='tight')
             plt.close()
+            buffer.seek(0)
             
             upload_result = cloudinary.uploader.upload(
-                tmp_file.name,
+                buffer,
                 folder="accent_comparisons",
                 transformation=[{"quality": "auto", "fetch_format": "auto"}]
             )
-            os.unlink(tmp_file.name)
             
             return upload_result["secure_url"]
 
     def compare_accents(self, audio_content1: bytes, audio_content2: bytes) -> Dict[str, Any]:
         """Comprehensive accent comparison"""
-        # Speaker similarity
-        speaker_sim = self.compare_speaker_embeddings(audio_content1, audio_content2)
-        
-        # Acoustic features
-        features1 = self.extract_acoustic_features(audio_content1)
-        features2 = self.extract_acoustic_features(audio_content2)
-        acoustic_comparison = self.compare_acoustic_features(features1, features2)
-        
-        # Transcription and pronunciation
-        text1 = self.transcribe_audio(audio_content1)
-        text2 = self.transcribe_audio(audio_content2)
-        pronunciation_diff = self.compare_pronunciation(text1, text2)
-        
-        # Visualization
-        visualization_url = self.generate_comparison_visualization(audio_content1, audio_content2)
-        
-        # Calculate overall score
-        weights = {"speaker_similarity": 0.3, "acoustic_features": 0.5, "pronunciation": 0.2}
-        
-        acoustic_scores = []
-        for name, value in acoustic_comparison.items():
-            if "distance" in name:
-                acoustic_scores.append(1 / (1 + value))
-            else:
-                acoustic_scores.append((value + 1) / 2)
-        
-        avg_acoustic = np.mean(acoustic_scores) if acoustic_scores else 0.0
-        
-        max_len = max(len(text1), len(text2)) or 1
-        pronunciation_sim = 1 - (pronunciation_diff["levenshtein_distance"] / max_len)
-        
-        overall_score = (
-            weights["speaker_similarity"] * speaker_sim +
-            weights["acoustic_features"] * avg_acoustic +
-            weights["pronunciation"] * pronunciation_sim
-        )
-        
-        return {
-            "speaker_similarity": float(speaker_sim),
-            "acoustic_comparison": {k: float(v) for k, v in acoustic_comparison.items()},
-            "pronunciation_differences": pronunciation_diff,
-            "transcriptions": {"reference": text1, "comparison": text2},
-            "visualization_url": visualization_url,
-            "overall_score": float(overall_score)
-        }
+        try:
+            # Speaker similarity
+            speaker_sim = self.compare_speaker_embeddings(audio_content1, audio_content2)
+            
+            # Acoustic features
+            features1 = self.extract_acoustic_features(audio_content1)
+            features2 = self.extract_acoustic_features(audio_content2)
+            acoustic_comparison = self.compare_acoustic_features(features1, features2)
+            
+            # Transcription and pronunciation
+            text1 = self.transcribe_audio(audio_content1)
+            text2 = self.transcribe_audio(audio_content2)
+            pronunciation_diff = self.compare_pronunciation(text1, text2)
+            
+            # Visualization
+            visualization_url = self.generate_comparison_visualization(audio_content1, audio_content2)
+            
+            # Calculate overall score
+            weights = {"speaker_similarity": 0.3, "acoustic_features": 0.5, "pronunciation": 0.2}
+            
+            acoustic_scores = []
+            for name, value in acoustic_comparison.items():
+                if "distance" in name:
+                    acoustic_scores.append(1 / (1 + value))
+                else:
+                    acoustic_scores.append((value + 1) / 2)
+            
+            avg_acoustic = np.mean(acoustic_scores) if acoustic_scores else 0.0
+            
+            max_len = max(len(text1), len(text2)) or 1
+            pronunciation_sim = 1 - (pronunciation_diff["levenshtein_distance"] / max_len)
+            
+            overall_score = (
+                weights["speaker_similarity"] * speaker_sim +
+                weights["acoustic_features"] * avg_acoustic +
+                weights["pronunciation"] * pronunciation_sim
+            )
+            
+            return {
+                "speaker_similarity": float(speaker_sim),
+                "acoustic_comparison": {k: float(v) for k, v in acoustic_comparison.items()},
+                "pronunciation_differences": pronunciation_diff,
+                "transcriptions": {"reference": text1, "comparison": text2},
+                "visualization_url": visualization_url,
+                "overall_score": float(overall_score)
+            }
+            
+        except Exception as e:
+            raise Exception(f"Error in accent comparison: {str(e)}")
 
 # Singleton instance
 accent_comparator = ArabicAccentComparator()

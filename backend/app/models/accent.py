@@ -1,25 +1,37 @@
 from datetime import datetime
-from typing import Dict, List, Any, Optional
-from pydantic import BaseModel, Field
+from typing import Dict, List, Any, Optional, Annotated
+from pydantic import BaseModel, Field, ConfigDict
+from pydantic.json_schema import JsonSchemaValue
+from pydantic_core import core_schema
 from bson import ObjectId
 
 class PyObjectId(ObjectId):
     @classmethod
-    def __get_validators__(cls):
-        yield cls.validate
+    def __get_pydantic_core_schema__(cls, source_type: Any, handler) -> core_schema.CoreSchema:
+        return core_schema.general_after_validator_function(
+            cls.validate,
+            core_schema.str_schema(),
+            serialization=core_schema.plain_serializer_function_ser_schema(
+                lambda x: str(x)
+            ),
+        )
 
     @classmethod
-    def validate(cls, v):
+    def validate(cls, v, info):
         if not ObjectId.is_valid(v):
             raise ValueError("Invalid objectid")
         return ObjectId(v)
 
     @classmethod
-    def __modify_schema__(cls, field_schema):
-        field_schema.update(type="string")
+    def __get_pydantic_json_schema__(
+        cls, core_schema: core_schema.CoreSchema, handler
+    ) -> JsonSchemaValue:
+        json_schema = handler(core_schema)
+        json_schema.update(type="string", format="objectid")
+        return json_schema
 
 class AccentComparisonInDB(BaseModel):
-    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    id: str = Field(alias="_id")
     user_id: str
     reference_audio: str
     comparison_audio: str
@@ -31,10 +43,10 @@ class AccentComparisonInDB(BaseModel):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
-    class Config:
-        arbitrary_types_allowed = True
-        json_encoders = {ObjectId: str}
-        schema_extra = {
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        json_encoders={ObjectId: str},
+        json_schema_extra={
             "example": {
                 "user_id": "user123",
                 "reference_audio": "ref_audio.wav",
@@ -46,13 +58,14 @@ class AccentComparisonInDB(BaseModel):
                 "overall_score": 0.82
             }
         }
+    )
 
 class AccentComparisonCreate(BaseModel):
     reference_audio: str
     comparison_audio: str
 
 class AccentComparisonResponse(BaseModel):
-    id: str
+    id: str = Field(alias="_id")
     user_id: str
     reference_audio: str
     comparison_audio: str
@@ -63,8 +76,8 @@ class AccentComparisonResponse(BaseModel):
     overall_score: float
     created_at: datetime
 
-    class Config:
-        schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "id": "507f1f77bcf86cd799439011",
                 "user_id": "user123",
@@ -78,3 +91,4 @@ class AccentComparisonResponse(BaseModel):
                 "created_at": "2023-12-07T10:30:00Z"
             }
         }
+    )

@@ -12,8 +12,7 @@ from app.utils.security import get_current_user
 from app.models.user import UserInDB
 
 router = APIRouter()
-
-@router.post("/compare", response_model=AccentComparisonResponse)
+@router.post("/compare")
 async def compare_accents(
     reference_audio: UploadFile = File(...),
     comparison_audio: UploadFile = File(...),
@@ -21,17 +20,10 @@ async def compare_accents(
 ):
     """Compare two Arabic audio files for accent differences"""
     try:
-        # Read audio files
+        # Read audio files without validation
         ref_content = await reference_audio.read()
         comp_content = await comparison_audio.read()
-        
-        # Validate audio files
-        if not ref_content or not comp_content:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Audio files cannot be empty"
-            )
-        
+
         # Perform comparison
         comparison_result = accent_comparator.compare_accents(ref_content, comp_content)
         
@@ -44,25 +36,19 @@ async def compare_accents(
         
         saved_comparison = create_accent_comparison(str(current_user.id), comparison_data)
         
-        return AccentComparisonResponse(
-            id=str(saved_comparison.id),
-            user_id=saved_comparison.user_id,
-            reference_audio=saved_comparison.reference_audio,
-            comparison_audio=saved_comparison.comparison_audio,
-            speaker_similarity=saved_comparison.speaker_similarity,
-            acoustic_comparison=saved_comparison.acoustic_comparison,
-            pronunciation_differences=saved_comparison.pronunciation_differences,
-            transcriptions=saved_comparison.transcriptions,
-            overall_score=saved_comparison.overall_score,
-            created_at=saved_comparison.created_at
-        )
+        # Convert ObjectId to string for JSON serialization
+        if "_id" in saved_comparison:
+            saved_comparison["_id"] = str(saved_comparison["_id"])
+        
+        return saved_comparison
         
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error processing audio files: {str(e)}"
         )
-
+    
+# ... (rest of the routes remain the same)
 @router.get("/comparisons", response_model=List[AccentComparisonResponse])
 async def get_user_accent_comparisons(
     limit: int = 10,
