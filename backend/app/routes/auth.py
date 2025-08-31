@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status,Form
+from fastapi import APIRouter, Depends, HTTPException, status, Body
 from fastapi.security import OAuth2PasswordRequestForm
 from datetime import timedelta
 from app.schemas.user import UserCreate, UserLogin, Token, UserInDB
@@ -12,24 +12,24 @@ from app.database import get_db
 from app.models.user import UserInDB as UserInDBModel
 from app.config import settings
 from datetime import datetime
+from typing import Annotated
+
 router = APIRouter(tags=["Authentication"])
 
 @router.post("/register", response_model=Token)
 async def register(
-    username: str = Form(...),
-    email: str = Form(...),
-    password: str = Form(...),
+    user_data: UserCreate,  # Use Pydantic model for JSON input
     db = Depends(get_db)
 ):
-    if db.users.find_one({"username": username}):
+    if db.users.find_one({"username": user_data.username}):
         raise HTTPException(status_code=400, detail="Username already registered")
-    if db.users.find_one({"email": email}):
+    if db.users.find_one({"email": user_data.email}):
         raise HTTPException(status_code=400, detail="Email already registered")
     
-    hashed_password = get_password_hash(password)
+    hashed_password = get_password_hash(user_data.password)
     user_dict = {
-        "username": username,
-        "email": email,
+        "username": user_data.username,
+        "email": user_data.email,
         "hashed_password": hashed_password,
         "disabled": False,
         "created_at": datetime.utcnow()
@@ -39,16 +39,19 @@ async def register(
     user_dict["_id"] = str(result.inserted_id)
     
     access_token = create_access_token(
-        data={"sub": username},
+        data={"sub": user_data.username},
         expires_delta=timedelta(minutes=1440)
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
 
 @router.post("/login", response_model=Token)
-async def login(form_data: OAuth2PasswordRequestForm = Depends(), db = Depends(get_db)):
-    user = db.users.find_one({"username": form_data.username})
-    if not user or not verify_password(form_data.password, user["hashed_password"]):
+async def login(
+    login_data: UserLogin,  # Use Pydantic model for JSON input
+    db = Depends(get_db)
+):
+    user = db.users.find_one({"username": login_data.username})
+    if not user or not verify_password(login_data.password, user["hashed_password"]):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
