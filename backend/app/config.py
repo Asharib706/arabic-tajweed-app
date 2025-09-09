@@ -5,7 +5,7 @@ import os
 
 load_dotenv()  # Load environment variables from .env file
 class Settings(BaseSettings):
-    SECRET_KEY: str=secrets.token_urlsafe(32)
+    SECRET_KEY: str=os.getenv("SECRET_KEY")
     MONGO_URI: str=os.getenv("MONGO_URI")
     MONGO_DB: str=os.getenv("MONGO_DB", "tajweed_app")
     ALGORITHM: str = "HS256"

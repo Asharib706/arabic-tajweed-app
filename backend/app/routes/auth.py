@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Body
 from fastapi.security import OAuth2PasswordRequestForm
 from datetime import timedelta
-from app.schemas.user import UserCreate, UserLogin, Token, UserInDB
+from app.schemas.user import UserCreate, UserLogin, Token, UserInDB, TokenData
 from app.utils.security import (
     get_password_hash,
     verify_password,
@@ -40,12 +40,11 @@ async def register(
     
     access_token = create_access_token(
         data={"sub": user_data.username},
-        expires_delta=timedelta(minutes=1440)
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-@router.post("/login", response_model=Token)
+@router.post("/login", response_model=TokenData)
 async def login(
     login_data: UserLogin,  # Use Pydantic model for JSON input
     db = Depends(get_db)
@@ -60,6 +59,5 @@ async def login(
     
     access_token = create_access_token(
         data={"sub": user["username"]},
-        expires_delta=timedelta(minutes=1440)
     )
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {"username":login_data.username,"access_token": access_token, "token_type": "bearer"}
