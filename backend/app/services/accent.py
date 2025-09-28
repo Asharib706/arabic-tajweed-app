@@ -93,7 +93,8 @@ class ArabicAccentComparator:
             "spectral_centroid": librosa.feature.spectral_centroid(y=y, sr=sr)[0],
             "spectral_bandwidth": librosa.feature.spectral_bandwidth(y=y, sr=sr)[0],
             "mfcc": librosa.feature.mfcc(y=y, sr=sr, n_mfcc=self.MFCC_N),
-            "pitch": librosa.pyin(y, fmin=80, fmax=400, sr=sr)[0]
+            "pitch": librosa.pyin(y, fmin=80, fmax=400, sr=sr)[0],
+            "ampitude":y
         }
         return features
 
@@ -150,6 +151,47 @@ class ArabicAccentComparator:
         # Transcribe directly from numpy array
         result = self.whisper_model.transcribe(y, language="ar")
         return result["text"]
+
+
+    def transcribe(self, audio_content: bytes) -> dict:
+        """Transcribe Arabic audio with timestamps"""
+        if self.whisper_model is None:
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+            self.whisper_model = whisper.load_model("small", device=device)
+        
+        # Convert audio to 16kHz mono
+        y, sr = self.load_audio_from_bytes(audio_content)
+    
+        # Whisper expects float32 audio [-1, 1]
+        if y.dtype != np.float32:
+            y = y.astype(np.float32)
+    
+        if np.max(np.abs(y)) > 1.0:
+            y = y / np.max(np.abs(y))
+        
+        # Ask Whisper for timestamps too
+        result = self.whisper_model.transcribe(
+            y,
+            language="ar",
+            verbose=False,
+            word_timestamps=False  # set to True if you want per-word timings (only in some forks)
+        )
+    
+        # Extract text + segment-level timings
+        transcription = {
+            "text": result["text"],
+            "segments": [
+                {
+                    "id": seg["id"],
+                    "start": seg["start"],
+                    "end": seg["end"],
+                    "text": seg["text"].strip()
+                }
+                for seg in result["segments"]
+            ]
+        }
+    
+        return transcription
 
     def compare_pronunciation(self, text1: str, text2: str) -> Dict[str, Any]:
         """Compare pronunciation"""

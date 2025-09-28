@@ -5,7 +5,7 @@ from app.services.accent_db import (
     create_accent_comparison,
     get_user_comparisons,
     get_comparison_by_id,
-    delete_comparison
+    delete_comparison,
 )
 from app.models.accent import AccentComparisonResponse, AccentComparisonCreate
 from app.utils.security import get_current_user
@@ -112,3 +112,38 @@ async def delete_accent_comparison(
         )
     
     return {"message": "Comparison deleted successfully"}
+
+
+import numpy as np
+
+@router.post("/transcription")
+async def transcribe_single_audio(
+    audio: UploadFile = File(...)
+):
+    """Transcribe a single Arabic audio file and extract acoustic features"""
+    try:
+        # Read audio file
+        audio_content = await audio.read()
+
+        # Run transcription
+        transcription = accent_comparator.transcribe(audio_content)
+
+        # Extract features
+        features = accent_comparator.extract_acoustic_features(audio_content)
+
+        def safe_array(arr):
+            return np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0).tolist()
+
+        return {
+            "filename": audio.filename,
+            "transcription": transcription,
+            "features": {
+                # "pitch": safe_array(features["pitch"]) if features["pitch"] is not None else None,
+                "amplitude": safe_array(features["ampitude"]),
+            }
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error transcribing audio: {str(e)}"
+        )
