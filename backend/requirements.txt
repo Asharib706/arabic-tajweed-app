@@ -25,3 +25,5 @@ tqdm
 speechbrain
 ffmpeg-python
 ffmpeg
+arabic-reshaper
+python-bidi

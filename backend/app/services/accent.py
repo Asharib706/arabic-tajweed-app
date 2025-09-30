@@ -218,35 +218,108 @@ class ArabicAccentComparator:
             previous_row = current_row
         
         return previous_row[-1]
-
-    def generate_comparison_visualization(self, audio_content1: bytes, audio_content2: bytes) -> str:
+    
+    def generate_comparison_visualization(self, audio_content1: bytes, audio_content2: bytes, transcription1: str = "", transcription2: str = "") -> str:
         """Generate and upload visualization to Cloudinary"""
         import matplotlib.pyplot as plt
         import librosa.display
+        import numpy as np
+        import io
+        import cloudinary
+        
+        # Try to import Arabic text processing libraries
+        try:
+            import arabic_reshaper
+            from bidi.algorithm import get_display
+        except ImportError:
+            # Fallback if libraries are not available
+            arabic_reshaper = None
+            get_display = None
+    
+        def format_arabic_text(text):
+            """Format Arabic text for proper display"""
+            if not text:
+                return text
+            if arabic_reshaper and get_display:
+                # Reshape and apply bidirectional algorithm for Arabic
+                reshaped_text = arabic_reshaper.reshape(text)
+                return get_display(reshaped_text)
+            return text
+    
+        # Configure matplotlib
+        plt.rcParams['axes.unicode_minus'] = False
+        try:
+            plt.rcParams['font.family'] = ['DejaVu Sans', 'Arial', 'sans-serif']
+        except:
+            pass
         
         y1, sr1 = self.load_audio_from_bytes(audio_content1)
         y2, sr2 = self.load_audio_from_bytes(audio_content2)
+    
+        plt.figure(figsize=(15, 14))
+    
+        # Sample exactly every 200 values
+        n = 300
+    
+        # Create indices for sampling
+        indices1 = np.arange(0, len(y1), n)
+        indices2 = np.arange(0, len(y2), n)
+    
+        y1_sampled = y1[indices1]
+        y2_sampled = y2[indices2]
+    
+        # Create time arrays for the sampled data
+        time1 = indices1 / sr1
+        time2 = indices2 / sr2
+    
+        # Format Arabic transcriptions
+        formatted_transcription1 = format_arabic_text(transcription1)
+        formatted_transcription2 = format_arabic_text(transcription2)
+    
+        # Waveform - Reference as line chart
+        plt.subplot(4, 1, 1)
+        plt.plot(time1, y1_sampled, alpha=0.8, color='blue', linewidth=1.2)
         
-        plt.figure(figsize=(15, 10))
+        if formatted_transcription1:
+            plt.text(0.98, 1.05, "Reference Audio - Waveform", 
+                    transform=plt.gca().transAxes, ha='right', fontsize=12, fontweight='bold')
+            plt.text(0.98, 0.95, formatted_transcription1, 
+                    transform=plt.gca().transAxes, ha='right', fontsize=10,
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="lightblue", alpha=0.7))
+        else:
+            plt.title("Reference Audio - Waveform", loc='right')
+            
+        plt.ylabel("Amplitude")
+        plt.xlabel("Time (seconds)")
+        plt.grid(True, alpha=0.3)
+    
+        # Waveform - Comparison as line chart
+        plt.subplot(4, 1, 2)
+        plt.plot(time2, y2_sampled, alpha=0.8, color='red', linewidth=1.2)
         
-        # Waveform comparison
-        plt.subplot(3, 1, 1)
-        librosa.display.waveshow(y1, sr=sr1, alpha=0.5, label="Reference")
-        librosa.display.waveshow(y2, sr=sr2, alpha=0.5, label="Comparison")
-        plt.title("Waveform Comparison")
-        plt.legend()
-
-        # Spectrogram comparison
-        plt.subplot(3, 1, 2)
+        if formatted_transcription2:
+            plt.text(0.98, 1.05, "Comparison Audio - Waveform", 
+                    transform=plt.gca().transAxes, ha='right', fontsize=12, fontweight='bold')
+            plt.text(0.98, 0.95, formatted_transcription2, 
+                    transform=plt.gca().transAxes, ha='right', fontsize=10,
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="lightcoral", alpha=0.7))
+        else:
+            plt.title("Comparison Audio - Waveform", loc='right')
+            
+        plt.ylabel("Amplitude")
+        plt.xlabel("Time (seconds)")
+        plt.grid(True, alpha=0.3)
+    
+        # Rest of the code remains the same...
+        plt.subplot(4, 1, 3)
         D1 = librosa.amplitude_to_db(np.abs(librosa.stft(y1)), ref=np.max)
         D2 = librosa.amplitude_to_db(np.abs(librosa.stft(y2)), ref=np.max)
-        librosa.display.specshow(D1, y_axis='log', x_axis='time', sr=sr1, alpha=0.5)
-        librosa.display.specshow(D2, y_axis='log', x_axis='time', sr=sr2, alpha=0.5)
+        librosa.display.specshow(D1, y_axis='log', x_axis='time', sr=sr1, alpha=0.5, label="Reference")
+        librosa.display.specshow(D2, y_axis='log', x_axis='time', sr=sr2, alpha=0.5, label="Comparison")
         plt.colorbar(format='%+2.0f dB')
         plt.title("Spectrogram Comparison")
-
-        # MFCC comparison
-        plt.subplot(3, 1, 3)
+    
+        plt.subplot(4, 1, 4)
         mfcc1 = librosa.feature.mfcc(y=y1, sr=sr1, n_mfcc=self.MFCC_N)
         mfcc2 = librosa.feature.mfcc(y=y2, sr=sr2, n_mfcc=self.MFCC_N)
         plt.plot(mfcc1.mean(axis=1), label="Reference")
@@ -255,63 +328,66 @@ class ArabicAccentComparator:
         plt.xlabel("MFCC Coefficient")
         plt.ylabel("Value")
         plt.legend()
-
+    
         plt.tight_layout()
-        
-        # Save to temporary bytes buffer and upload to Cloudinary
+    
         with io.BytesIO() as buffer:
             plt.savefig(buffer, format='png', dpi=300, bbox_inches='tight')
             plt.close()
             buffer.seek(0)
-            
+    
             upload_result = cloudinary.uploader.upload(
                 buffer,
                 folder="accent_comparisons",
                 transformation=[{"quality": "auto", "fetch_format": "auto"}]
             )
-            
+    
             return upload_result["secure_url"]
-
     def compare_accents(self, audio_content1: bytes, audio_content2: bytes) -> Dict[str, Any]:
         """Comprehensive accent comparison"""
         try:
             # Speaker similarity
             speaker_sim = self.compare_speaker_embeddings(audio_content1, audio_content2)
-            
+
             # Acoustic features
             features1 = self.extract_acoustic_features(audio_content1)
             features2 = self.extract_acoustic_features(audio_content2)
             acoustic_comparison = self.compare_acoustic_features(features1, features2)
-            
-            # Transcription and pronunciation
+
+            # Transcription and pronunciation (only once)
             text1 = self.transcribe_audio(audio_content1)
             text2 = self.transcribe_audio(audio_content2)
             pronunciation_diff = self.compare_pronunciation(text1, text2)
-            
-            # Visualization
-            visualization_url = self.generate_comparison_visualization(audio_content1, audio_content2)
-            
+
+            # Visualization - pass transcriptions to avoid double transcription
+            visualization_url = self.generate_comparison_visualization(
+                audio_content1, 
+                audio_content2, 
+                text1, 
+                text2
+            )
+
             # Calculate overall score
             weights = {"speaker_similarity": 0.3, "acoustic_features": 0.5, "pronunciation": 0.2}
-            
+
             acoustic_scores = []
             for name, value in acoustic_comparison.items():
                 if "distance" in name:
                     acoustic_scores.append(1 / (1 + value))
                 else:
                     acoustic_scores.append((value + 1) / 2)
-            
+
             avg_acoustic = np.mean(acoustic_scores) if acoustic_scores else 0.0
-            
+
             max_len = max(len(text1), len(text2)) or 1
             pronunciation_sim = 1 - (pronunciation_diff["levenshtein_distance"] / max_len)
-            
+
             overall_score = (
                 weights["speaker_similarity"] * speaker_sim +
                 weights["acoustic_features"] * avg_acoustic +
                 weights["pronunciation"] * pronunciation_sim
             )
-            
+
             return {
                 "speaker_similarity": float(speaker_sim),
                 "acoustic_comparison": {k: float(v) for k, v in acoustic_comparison.items()},
@@ -320,9 +396,8 @@ class ArabicAccentComparator:
                 "visualization_url": visualization_url,
                 "overall_score": float(overall_score)
             }
-            
+
         except Exception as e:
             raise Exception(f"Error in accent comparison: {str(e)}")
-
-# Singleton instance
+    # Singleton instance
 accent_comparator = ArabicAccentComparator()
