@@ -259,7 +259,7 @@ class ArabicAccentComparator:
         plt.figure(figsize=(15, 14))
     
         # Sample exactly every 200 values
-        n = 300
+        n = 350
     
         # Create indices for sampling
         indices1 = np.arange(0, len(y1), n)
@@ -283,8 +283,8 @@ class ArabicAccentComparator:
         if formatted_transcription1:
             plt.text(0.98, 1.05, "Reference Audio - Waveform", 
                     transform=plt.gca().transAxes, ha='right', fontsize=12, fontweight='bold')
-            plt.text(0.98, 0.95, formatted_transcription1, 
-                    transform=plt.gca().transAxes, ha='right', fontsize=10,
+            plt.text(0.98, 0.90, formatted_transcription1, 
+                    transform=plt.gca().transAxes, ha='right', fontsize=16,
                     bbox=dict(boxstyle="round,pad=0.3", facecolor="lightblue", alpha=0.7))
         else:
             plt.title("Reference Audio - Waveform", loc='right')
@@ -300,8 +300,8 @@ class ArabicAccentComparator:
         if formatted_transcription2:
             plt.text(0.98, 1.05, "Comparison Audio - Waveform", 
                     transform=plt.gca().transAxes, ha='right', fontsize=12, fontweight='bold')
-            plt.text(0.98, 0.95, formatted_transcription2, 
-                    transform=plt.gca().transAxes, ha='right', fontsize=10,
+            plt.text(0.98, 0.90, formatted_transcription2, 
+                    transform=plt.gca().transAxes, ha='right', fontsize=16,
                     bbox=dict(boxstyle="round,pad=0.3", facecolor="lightcoral", alpha=0.7))
         else:
             plt.title("Comparison Audio - Waveform", loc='right')
