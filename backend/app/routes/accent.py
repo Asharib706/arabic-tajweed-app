@@ -137,10 +137,6 @@ async def transcribe_single_audio(
         return {
             "filename": audio.filename,
             "transcription": transcription,
-            "features": {
-                # "pitch": safe_array(features["pitch"]) if features["pitch"] is not None else None,
-                "amplitude": safe_array(features["ampitude"]),
-            }
         }
     except Exception as e:
         raise HTTPException(
