@@ -18,6 +18,9 @@ import soundfile as sf
 from pydub import AudioSegment
 import tempfile
 
+import google.generativeai as genai
+import os
+import json
 class ArabicAccentComparator:
     def __init__(self):
         self.speaker_model = SpeakerRecognition.from_hparams(
@@ -152,46 +155,108 @@ class ArabicAccentComparator:
         result = self.whisper_model.transcribe(y, language="ar")
         return result["text"]
 
+    def transcribe(self,audio_path: str, api_key: str):
+        """
+        Transcribe an Arabic Quran recitation audio with Tajwīd rules (color-coded per letter)
+        using Google's Gemini model.
 
-    def transcribe(self, audio_content: bytes) -> dict:
-        """Transcribe Arabic audio with timestamps"""
-        if self.whisper_model is None:
-            device = "cuda" if torch.cuda.is_available() else "cpu"
-            self.whisper_model = whisper.load_model("small", device=device)
+        Args:
+            audio_path (str): Path to the Arabic recitation audio file (.wav or .mp3)
+            api_key (str): Your Google API key for Gemini
+
+        Returns:
+            dict: A JSON object containing transcription with Tajwīd annotations
+        """
+
+        # 1️⃣ Configure Gemini API
+        genai.configure(api_key=api_key)
+
+        # 2️⃣ Validate file path
+        if not os.path.exists(audio_path):
+            raise FileNotFoundError(f"Audio file not found at {audio_path}")
+
+        # 3️⃣ Upload the audio
+        print("🔹 Uploading audio to Gemini...")
+        audio_file = genai.upload_file(audio_path)
+        if audio_file is None:
+            raise ValueError("Audio upload failed!")
+
+        # 4️⃣ Load model
+        model = genai.GenerativeModel("gemini-2.5-flash")
+
+        # 5️⃣ Prompt for Tajwīd-aware transcription
+        prompt = """
+You are an expert Arabic Quran recitation transcription assistant.
+
+TASK:
+1. Transcribe the given Arabic recitation audio with **Quranic orthography** (Uthmani script).
+2. Apply **full diacritical marks (Tashkīl)** correctly on every letter.
+3. For each **word**, break it into **letters**, and assign Tajwīd rule(s) with color per letter.
+4. Include **timestamps (start and end)** for each word in seconds.
+
+📘 TAJWĪD RULES (with explanations and color codes):
+
+- **Red (Ghunna):** Nasal sound (~2 counts) usually on ن or م when followed by specific letters.
+- **Green (Idghām):** Assimilation of one letter into the next, sometimes nasalized.
+- **Blue (Ikhfā’ / Iqlāb):** Hidden or converted sounds (e.g. ن before certain letters or converted to م before ب).
+- **Yellow (Madd):** Elongation of vowel sounds (2–6 counts).
+- **Purple (Ikhfā’ Shafawi):** Nasalization when م precedes ب.
+- **Gray (Qalqalah):** Bouncing echo-like sound (ق, ط, ب, ج, د) when in sukoon.
+- **Brown (Tafkhīm of ر):** Heavy / emphatic pronunciation of the letter ر.
+
+🔹 OUTPUT FORMAT:
+Return ONLY a valid JSON in this exact format:
+
+{
+  "text": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "word": "بِسْمِ",
+      "letters": [
+        {"letter": "بِ", "rule": null, "color": null},
+        {"letter": "سْ", "rule": "Qalqalah", "color": "gray"},
+        {"letter": "مِ", "rule": "Ghunna", "color": "red"}
+      ]
+    },
+    {
+      "id": 1,
+      "start": 2.4,
+      "end": 4.1,
+      "word": "اللّٰهِ",
+      "letters": [
+        {"letter": "ا", "rule": "Madd", "color": "yellow"},
+        {"letter": "للّٰ", "rule": "Idghām", "color": "green"},
+        {"letter": "هِ", "rule": null, "color": null}
+      ]
+    }
+  ]
+}
+
+Make sure:
+- Each letter entry has “letter”, “rule”, and “color”.
+- If no Tajwīd rule applies, use `null`.
+- Use precise Quranic orthography and full diacritics.
+- Do NOT return any explanation or text other than valid JSON. alway generate consistent answer give null if no rule applies.
+"""
+        result = model.generate_content([audio_file, prompt])
+
+        # 7️⃣ Extract text safely
+        result_text = getattr(result, "text", None) or getattr(result, "candidates", [{}])[0].get("output_text", "")
+        start_index = result_text.find('{')
+        end_index = result_text.rfind('}') + 1
+        cleaned_json = result_text[start_index:end_index]
+
+        # 8️⃣ Parse JSON
+        try:
+            transcription = json.loads(cleaned_json)
+            return transcription
+        except json.JSONDecodeError as e:
+            print("Raw model output:\n", result_text)
+            raise e
         
-        # Convert audio to 16kHz mono
-        y, sr = self.load_audio_from_bytes(audio_content)
-    
-        # Whisper expects float32 audio [-1, 1]
-        if y.dtype != np.float32:
-            y = y.astype(np.float32)
-    
-        if np.max(np.abs(y)) > 1.0:
-            y = y / np.max(np.abs(y))
-        
-        # Ask Whisper for timestamps too
-        result = self.whisper_model.transcribe(
-            y,
-            language="ar",
-            verbose=False,
-            word_timestamps=False  # set to True if you want per-word timings (only in some forks)
-        )
-    
-        # Extract text + segment-level timings
-        transcription = {
-            "text": result["text"],
-            "segments": [
-                {
-                    "id": seg["id"],
-                    "start": seg["start"],
-                    "end": seg["end"],
-                    "text": seg["text"].strip()
-                }
-                for seg in result["segments"]
-            ]
-        }
-    
-        return transcription
 
     def compare_pronunciation(self, text1: str, text2: str) -> Dict[str, Any]:
         """Compare pronunciation"""

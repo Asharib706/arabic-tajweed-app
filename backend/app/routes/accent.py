@@ -10,7 +10,9 @@ from app.services.accent_db import (
 from app.models.accent import AccentComparisonResponse, AccentComparisonCreate
 from app.utils.security import get_current_user
 from app.models.user import UserInDB
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 router = APIRouter()
 @router.post("/compare")
 async def compare_accents(
@@ -116,28 +118,31 @@ async def delete_accent_comparison(
 
 import numpy as np
 
+
 @router.post("/transcription")
 async def transcribe_single_audio(
     audio: UploadFile = File(...)
 ):
     """Transcribe a single Arabic audio file and extract acoustic features"""
     try:
-        # Read audio file
-        audio_content = await audio.read()
+        api_key = os.getenv("GEMINI_API_KEY")
 
-        # Run transcription
-        transcription = accent_comparator.transcribe(audio_content)
+        # ✅ Step 1: Save the uploaded file temporarily
+        temp_path = f"{audio.filename}"
+        with open(temp_path, "wb") as f:
+            f.write(await audio.read())
 
-        # Extract features
-        features = accent_comparator.extract_acoustic_features(audio_content)
+        # ✅ Step 2: Pass the path to your transcribe method
+        transcription = accent_comparator.transcribe(temp_path, api_key=api_key)
 
-        def safe_array(arr):
-            return np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0).tolist()
+        # ✅ Step 3: (Optional) Clean up the temp file
+        os.remove(temp_path)
 
         return {
             "filename": audio.filename,
             "transcription": transcription,
         }
+
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
