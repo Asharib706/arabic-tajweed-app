@@ -170,19 +170,28 @@ class ArabicAccentComparator:
 
         # 1️⃣ Configure Gemini API
         genai.configure(api_key=api_key)
-
         # 2️⃣ Validate file path
         if not os.path.exists(audio_path):
             raise FileNotFoundError(f"Audio file not found at {audio_path}")
 
         # 3️⃣ Upload the audio
         print("🔹 Uploading audio to Gemini...")
-        audio_file = genai.upload_file(audio_path)
-        if audio_file is None:
-            raise ValueError("Audio upload failed!")
+        model = genai.GenerativeModel("models/gemini-2.5-flash")
+          # can be .wav, .mp3, etc.
+        with open(audio_path, "rb") as f:
+            audio_bytes = f.read()
 
+        # --- 4. Create audio part (binary audio data) ---
+        audio_part = genai.protos.Part(
+            inline_data=genai.protos.Blob(
+                mime_type="audio/wav", 
+                data=audio_bytes
+            )
+        )
+        if audio_part is None:
+            raise ValueError("Audio upload failed!")
+        print("✅ Audio uploaded successfully.")
         # 4️⃣ Load model
-        model = genai.GenerativeModel("gemini-2.5-flash")
 
         # 5️⃣ Prompt for Tajwīd-aware transcription
         prompt = """
@@ -241,10 +250,10 @@ Make sure:
 - Use precise Quranic orthography and full diacritics.
 - Do NOT return any explanation or text other than valid JSON. alway generate consistent answer give null if no rule applies.
 """
-        result = model.generate_content([audio_file, prompt])
-
+        result = model.generate_content([audio_part, prompt])
+        print("✅ Transcription completed.")
         # 7️⃣ Extract text safely
-        result_text = getattr(result, "text", None) or getattr(result, "candidates", [{}])[0].get("output_text", "")
+        result_text = result.text
         start_index = result_text.find('{')
         end_index = result_text.rfind('}') + 1
         cleaned_json = result_text[start_index:end_index]

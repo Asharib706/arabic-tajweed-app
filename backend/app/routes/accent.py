@@ -116,7 +116,7 @@ async def delete_accent_comparison(
     return {"message": "Comparison deleted successfully"}
 
 
-import numpy as np
+
 
 
 @router.post("/transcription")
